@@ -1,28 +1,26 @@
-# create-svelte
+# About-me
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+> In this project I'll go to create my portfolio. Here you can se some information about me and my skills and also some projects that I developed.
 
-## Creating a project
+Links:
+ - 📃 [Notion](https://www.notion.so/ruanpasta-website-7f0318ddf62a40e88ef5747ff71f3e53)
+ - 🖌️ [Figma project](https://www.figma.com/file/RcZYIwkHN66Jv4Xwfe8G3x/Portfolio?node-id=0%3A1)
+ - 🏜️ [Figma prototype flux](https://www.figma.com/proto/RcZYIwkHN66Jv4Xwfe8G3x/Portfolio?node-id=19%3A13&scaling=scale-down&page-id=0%3A1&starting-point-node-id=19%3A13)
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
-npm run dev
+> yarn dev 
+# or
+> npm run dev 
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+> yarn dev -- --open
+# or
+> npm run dev -- --open
 ```
 
 ## Building
@@ -36,3 +34,5 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+<center>🚀 This project is under construction 🚀</center>
