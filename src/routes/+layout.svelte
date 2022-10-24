@@ -1,27 +1,18 @@
 <script lang="ts">
   import "../app.css";
-  import { Navbar, Row, Section } from '../components'
-
-  let navbarComponent: Navbar;
-  $: if (navbarComponent) console.log(navbarComponent)
+  import Header from "./Header.svelte";
 </script>
 
 <div class="app">
-  <Navbar bind:this={navbarComponent} color="primary" class="cabrito">
-    <Row>
-      <Section>RP</Section>
-      <Section>Icone</Section>
-      <Section>Icone</Section>
-    </Row>
-  </Navbar>
+  <Header />
 
   <main>
     <slot />
   </main>
 </div>
 
-<style>
+<style lang="scss">
   .app {
-    @apply box-border m-0 p-0;
+    @apply box-border m-0 p-0 font-base bg-black h-full w-full;
   }
 </style>
