@@ -9,7 +9,7 @@
 </nav>
 
 <script lang="ts">
-  import { classMap } from "../../helpers/classMap";
+  import { classMap } from "$helpers/classMap";
 
   let element: HTMLElement;
   export const getElement = () => element;  
