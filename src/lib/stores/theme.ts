@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-import type { Theme } from "../global";
+import type { Theme } from "../../global";
 
 const theme = writable<Theme>('system')
 
