@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand-VariableFont_wght.ttf');
+}
+
 body {
-  @apply h-full w-full bg-black text-white;
+  @apply h-full w-full text-[color:var(--color-text)]  bg-[color:var(--color-background)]  font-base;
 }
