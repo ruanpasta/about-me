@@ -5,7 +5,8 @@
 	import WhiteBalanceSunny from 'svelte-material-icons/WhiteBalanceSunny.svelte';
 	import MoonWaningCrescent from 'svelte-material-icons/MoonWaningCrescent.svelte';
 
-	$: isSystemDark = false;
+	let isSystemDark = false;
+
 	onMount(
 		() =>
 			(isSystemDark =
@@ -18,8 +19,7 @@
 		return 'light';
 	};
 
-	const getComponent = getTheme() === 'light' ? WhiteBalanceSunny : MoonWaningCrescent;
-	let component = getComponent;
+	let component = getTheme() === 'light' ? WhiteBalanceSunny : MoonWaningCrescent;;
 
 	theme.subscribe((current) => component = current === 'light' ? WhiteBalanceSunny : MoonWaningCrescent);
 
