@@ -5,6 +5,7 @@
 	import WhiteBalanceSunny from 'svelte-material-icons/WhiteBalanceSunny.svelte'
 	import MoonWaningCrescent from 'svelte-material-icons/MoonWaningCrescent.svelte'
   import type { Theme } from 'src/global';
+  import { Empty } from '$lib/components';
 
 	let isSystemDark = false
 
@@ -16,21 +17,43 @@
 
   const Icon = (theme: Theme)  => getTheme(theme) === 'light' ? WhiteBalanceSunny : MoonWaningCrescent
 
-	let component = Icon($theme)
+  let component = Empty
 
-  onMount(
-		() => {
-        window.matchMedia('(prefers-color-scheme: dark)')
-          .addEventListener('change', event => {
-            isSystemDark = event.matches
-            component = Icon($theme)
-          })
+  onMount(() => {
+        console.log('Robin')
+        const storageTheme = window.localStorage.getItem('theme') as Theme
+        if (storageTheme && storageTheme.includes('light' || 'dark'))
+          return updateThemeByStorage(storageTheme)
+        console.log('Batman')
+        updateThemeOnInitBySystemPreferences(),
+        updateThemeOnSystemPreferencesChanges()
     }
   )
 
   theme.subscribe((currentTheme) => component = Icon(currentTheme))
 
-	const handleOnClick = () => theme.set(getTheme($theme) === 'light' ? 'dark' : 'light')
+  const updateThemeByStorage = (storageTheme: Theme) => {
+    console.log(storageTheme)
+    theme.set(storageTheme)
+    component = Icon(storageTheme)
+  }
+
+	const handleOnClick = () => {
+    const newTheme = getTheme($theme) === 'light' ? 'dark' : 'light'
+    window.localStorage.setItem('theme', newTheme)
+    theme.set(newTheme)
+  }
+
+  const updateThemeOnInitBySystemPreferences = () => {
+    isSystemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    component = Icon($theme)
+  }
+
+  const updateThemeOnSystemPreferencesChanges = () => window.matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', event => {
+      isSystemDark = event.matches
+      component = Icon($theme)
+  })
 </script>
 
 <button class="icon" on:click={handleOnClick} on:keyup={() => {}}>
