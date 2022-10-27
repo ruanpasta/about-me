@@ -10,7 +10,10 @@ const config = {
 	  }),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+    alias: {
+      '$helpers': './src/helpers',
+    }
 	}
 };
 
