@@ -20,11 +20,11 @@
   let component = Empty
 
   onMount(() => {
-        console.log('Robin')
         const storageTheme = window.localStorage.getItem('theme') as Theme
-        if (storageTheme && storageTheme.includes('light' || 'dark'))
+        if (storageTheme && 
+          (storageTheme.includes('light') || storageTheme.includes('dark'))
+        )
           return updateThemeByStorage(storageTheme)
-        console.log('Batman')
         updateThemeOnInitBySystemPreferences(),
         updateThemeOnSystemPreferencesChanges()
     }
@@ -33,7 +33,6 @@
   theme.subscribe((currentTheme) => component = Icon(currentTheme))
 
   const updateThemeByStorage = (storageTheme: Theme) => {
-    console.log(storageTheme)
     theme.set(storageTheme)
     component = Icon(storageTheme)
   }

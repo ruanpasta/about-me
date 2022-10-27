@@ -7,7 +7,6 @@
   import "../app.css";
   import Header from "./Header.svelte";
   import { theme } from '$lib/stores/theme'
-  import ThemeSwitch from "$lib/components/ThemeSwitch/ThemeSwitch.svelte";
 </script>
 
 <div class="app">
