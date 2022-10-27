@@ -1,29 +1,36 @@
 <script lang="ts">
-	import { theme } from '$lib/stores/theme';
-	import { onMount } from 'svelte';
+	import { theme } from '$lib/stores/theme'
+	import { onMount } from 'svelte'
 
-	import WhiteBalanceSunny from 'svelte-material-icons/WhiteBalanceSunny.svelte';
-	import MoonWaningCrescent from 'svelte-material-icons/MoonWaningCrescent.svelte';
+	import WhiteBalanceSunny from 'svelte-material-icons/WhiteBalanceSunny.svelte'
+	import MoonWaningCrescent from 'svelte-material-icons/MoonWaningCrescent.svelte'
+  import type { Theme } from 'src/global';
 
-	let isSystemDark = false;
+	let isSystemDark = false
 
-	onMount(
-		() =>
-			(isSystemDark =
-				window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-	);
+	const getTheme = (theme: Theme) => {
+		if (theme !== 'system') return theme
+		if (theme === 'system' && isSystemDark) return 'dark'
+		return 'light'
+	}
 
-	const getTheme = () => {
-		if ($theme !== 'system') return $theme;
-		if ($theme === 'system' && isSystemDark) return 'dark';
-		return 'light';
-	};
+  const Icon = (theme: Theme)  => getTheme(theme) === 'light' ? WhiteBalanceSunny : MoonWaningCrescent
 
-	let component = getTheme() === 'light' ? WhiteBalanceSunny : MoonWaningCrescent;;
+	let component = Icon($theme)
 
-	theme.subscribe((current) => component = current === 'light' ? WhiteBalanceSunny : MoonWaningCrescent);
+  onMount(
+		() => {
+        window.matchMedia('(prefers-color-scheme: dark)')
+          .addEventListener('change', event => {
+            isSystemDark = event.matches
+            component = Icon($theme)
+          })
+    }
+  )
 
-	const handleOnClick = () => theme.set($theme === 'light' ? 'dark' : 'light');
+  theme.subscribe((currentTheme) => component = Icon(currentTheme))
+
+	const handleOnClick = () => theme.set(getTheme($theme) === 'light' ? 'dark' : 'light')
 </script>
 
 <button class="icon" on:click={handleOnClick} on:keyup={() => {}}>
