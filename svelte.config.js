@@ -13,6 +13,7 @@ const config = {
 		adapter: adapter(),
     alias: {
       '$helpers': './src/helpers',
+      '$styles': './static/styles',
     }
 	}
 };

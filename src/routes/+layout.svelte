@@ -4,7 +4,7 @@
 </svelte:head>
 
 <script lang="ts">
-  import "../app.css";
+  import "../app.scss";
   import Header from "./Header.svelte";
   import { theme } from '$lib/stores/theme'
 </script>

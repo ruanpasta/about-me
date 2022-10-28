@@ -4,11 +4,11 @@
 
 <script>
     let className = ''
-  export { className as class }
+    export { className as class }
 </script>
 
 <style lang="scss">
   section {
-    @apply justify-start text-[color:var(--color-primary)];
+    @apply justify-start;
   }
 </style>

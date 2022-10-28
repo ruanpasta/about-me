@@ -55,7 +55,7 @@
   })
 </script>
 
-<button class="icon" on:click={handleOnClick} on:keyup={() => {}}>
+<button class="icon" type="button" title="theme switch" on:click={handleOnClick} on:keyup={() => {}}>
   <svelte:component this={component} />
 </button>
 

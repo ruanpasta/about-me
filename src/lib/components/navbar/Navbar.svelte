@@ -20,6 +20,6 @@
 
 <style lang="scss">
   nav {
-    @apply p-4 justify-between;
+    @apply p-4;
   }
 </style>

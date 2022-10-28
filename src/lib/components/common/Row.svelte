@@ -15,6 +15,6 @@
 
 <style lang="scss">
   .ab-row {
-    @apply flex flex-row justify-between relative box-border w-full;
+    @apply flex flex-row justify-between relative box-border w-full items-center;
   }
 </style>

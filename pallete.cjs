@@ -1,5 +1,5 @@
 module.exports = {
-	black: {
+	blackinho: {
 		400: '#151515'
 	},
 	orange: {

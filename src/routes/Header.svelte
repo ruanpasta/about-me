@@ -1,8 +1,10 @@
 <header>
   <Navbar>
     <Row>
-      <Section class="title">RP</Section>
-      <Section>Icone</Section>
+      <Section class="logo">RP</Section>
+      <Section>
+        <Menu />
+      </Section>
       <Section>
         <ThemeSwitch />
       </Section>
@@ -12,8 +14,6 @@
 
 <script>
   import { Navbar, Row, Section, ThemeSwitch } from "$lib/components";
-</script>
+  import Menu from "$lib/components/menu/Menu.svelte";
 
-<style>
-  
-</style>
+</script>

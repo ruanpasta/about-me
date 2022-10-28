@@ -4,8 +4,8 @@ const { default: pallete } = require('./pallete.cjs');
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
+    colors: { ...pallete },
     extend: {
-      colors: { ...pallete },
       fontFamily: {
         base: ['Quicksand', 'sans-serif']
       }
