@@ -3,7 +3,7 @@
     <Row>
       <Section class="logo">RP</Section>
       <Section>
-        <Menu />
+        <Menu {menus} />
       </Section>
       <Section>
         <ThemeSwitch />
@@ -12,8 +12,33 @@
   </Navbar>
 </header>
 
-<script>
+<script lang="ts">
   import { Navbar, Row, Section, ThemeSwitch } from "$lib/components";
   import Menu from "$lib/components/menu/Menu.svelte";
+	import PackageVariantClosed from 'svelte-material-icons/PackageVariantClosed.svelte'
+	import BookOpenPageVariantOutline from 'svelte-material-icons/BookOpenPageVariantOutline.svelte'
+	import BriefcaseOutline from 'svelte-material-icons/BriefcaseOutline.svelte'
+	import InformationOutline from 'svelte-material-icons/InformationOutline.svelte'
+	import type { MenuItem } from '$lib/components/menu/Menus'
 
+	let menus: MenuItem[] = [
+		{
+			name: 'Work',
+			icon: PackageVariantClosed,
+			path: '',
+			items: [
+        {
+          name: 'Weather now',
+          path: '',
+        },
+        {
+          name: 'Other',
+          path: ''
+        },
+      ]
+    },
+    { name: 'Skills', icon: BookOpenPageVariantOutline, path: '' },
+    { name: 'Experience', icon: BriefcaseOutline, path: '' },
+    { name: 'About me', icon: InformationOutline, path: '' }
+	]
 </script>

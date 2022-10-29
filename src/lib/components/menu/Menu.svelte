@@ -1,67 +1,78 @@
 <script lang="ts">
 	import { classMap } from '$helpers/classMap'
 	import Menu from 'svelte-material-icons/Menu.svelte'
-	import BookOpenPageVariantOutline from 'svelte-material-icons/BookOpenPageVariantOutline.svelte'
-	import BriefcaseOutline from 'svelte-material-icons/BriefcaseOutline.svelte'
-	import InformationOutline from 'svelte-material-icons/InformationOutline.svelte'
-	import PackageVariantClosed from 'svelte-material-icons/PackageVariantClosed.svelte'
 	import MenuList from './MenuList.svelte'
 	import type { MenuItem } from './Menus'
 
 	let showMenu = false
+  export let menus: MenuItem[] = [] 
 
-	let menus: MenuItem[] = [
-		{
-			name: 'Work',
-			icon: PackageVariantClosed,
-			path: '',
-			items: [
-        {
-				name: 'Weather now',
-				path: ''
-			},
-        {
-				name: 'Other',
-				path: ''
-			},
-    ]
-		},
-		{ name: 'Skills', icon: BookOpenPageVariantOutline, path: '' },
-		{ name: 'Expirience', icon: BriefcaseOutline, path: '' },
-		{ name: 'About me', icon: InformationOutline, path: '' }
-	]
+  const select = (menu) => {
+    menus.forEach((item) => {
+      if (item.name === menu.name) return item.selected = !item.selected
+      return item.selected = false
+    })
+    console.log(menus)
+  }
+
+  const closeExpandedMenu = (item: MenuItem) => {
+    item.expanded = false
+    if (item.items?.length) return closeExpandedMenu(item.items)
+  }
+
+  const closeMenu = () => {
+    showMenu = false
+    menus.forEach(closeExpandedMenu)
+  }
 </script>
 
-<div
-	class={classMap({
-		menu: true,
-		menu__list: showMenu
-	})}
-	on:mouseleave={() => (showMenu = false)}
->
-  <div>
-    <button type="button" title="menu" on:click={() => (showMenu = !showMenu)}>
-      <Menu size={30} />
-    </button>
-  </div>
+<div class:gradient={showMenu}>
+  <div
+    class={classMap({
+      menu: true,
+      menu__list: showMenu,
+      'menu--open': showMenu
+    })}
+    on:mouseleave={() => closeMenu()}
+  >
+    <div>
+      <button type="button" title="menu" on:click={() => (showMenu = !showMenu)}>
+        <Menu size={30} />
+      </button>
+    </div>
 
-	<ul>
-		{#if showMenu}
-      {#each menus as menu}
-  			<MenuList {menu} />
-      {/each}
-		{/if}
-	</ul>
+    <ul class="menu__list__items">
+      {#if showMenu}
+        {#each menus as menu}
+          <MenuList {menu} {select} />
+        {/each}
+      {/if}
+    </ul>
+  </div>
 </div>
 
 <style lang="scss">
 	.menu {
-		@apply text-[color:#810A0B];
+		@apply text-[color:var(--color-secondary)];
+    @apply rounded-b-[30px];
+
+    &__list {
+      @apply flex flex-col gap-4;
+      @apply bg-[color:var(--color-intermediate-background)];
+    }
+
+    &--open {
+      @apply p-4 text-[color:var(--color-primary)];
+    }
+    
+    .menu__list__items {
+      @apply flex flex-col gap-4;
+    }
 	}
 
-	.menu__list {
-		@apply fixed top-0 left-0 w-full p-4;
-		@apply flex flex-col gap-3;
-		@apply bg-[color:var(--color-intermediate-background)];
-	}
+  .gradient {
+    @apply fixed top-0 left-0 w-full;
+    @apply pb-0.5 rounded-b-[30px];
+    @apply bg-gradient-to-r from-[color:var(--color-primary)] via-[color:var(--color-secondary)] to-[color:var(--color-tertiary)];
+  }
 </style>
