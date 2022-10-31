@@ -1,7 +1,8 @@
 import Navbar from './navbar'
-import ThemeSwitch from './ThemeSwitch/ThemeSwitch.svelte'
+import Presentation from './presentation/Presentation.svelte'
 import Menu from './menu'
-import { Row, Section, Empty } from './common'
+import { Row, Section, Empty, Gradient } from './common'
+import ThemeSwitch from './themeSwitch/ThemeSwitch.svelte'
 
 export {
   Navbar,
@@ -10,4 +11,6 @@ export {
   Row,
   Section,
   Empty,
+  Presentation,
+  Gradient
 }

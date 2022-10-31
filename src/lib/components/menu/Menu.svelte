@@ -19,6 +19,8 @@
 	}
 </script>
 
+<!-- TODO: Use Gradient component here -->
+
 <div class:gradient={showMenu}>
 	<div
 		class={classMap({

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { classMap } from '$helpers/classMap'
-	import { onMount } from 'svelte'
+	import { Gradient } from '../common'
 	import type { MenuItem } from './Menus'
 
 	let className = ''
@@ -9,8 +9,18 @@
 	export let level = 0
 
 	let showHover = false
+	let isGradient = false
 
-	const itemClicked = () => (menu.expanded = !menu.expanded)
+	const showGradient = () => {
+		let timeTohide = 300
+		isGradient = true
+		setTimeout(() => (isGradient = false), timeTohide)
+	}
+
+	const itemClicked = () => {
+		menu.expanded = !menu.expanded
+		showGradient()
+	}
 </script>
 
 <li
@@ -26,23 +36,27 @@
 	{#if menu.icon}
 		<svelte:component this={menu.icon} />
 	{/if}
-	<div
-		class={classMap({
-			menu__gradient: true
-		})}
-		on:mouseenter={() => (showHover = true)}
-		on:mouseleave={() => (showHover = false)}
+
+	<Gradient
+		class="w-full ml-3"
+		show={isGradient}
+		backgroundColor="var(--color-intermediate-background)"
 	>
-		<a
-			href="/#"
-			class={classMap({
-				menu__label: true,
-				'menu__label--hover': showHover
-			})}
+		<div
+			on:mouseenter={() => (showHover = true)}
+			on:mouseleave={() => (showHover = false)}
 		>
-			{menu.name}
-		</a>
-	</div>
+			<a
+				href="/#"
+				class={classMap({
+					menu__label: true,
+					'menu__label--hover': showHover
+				})}
+			>
+				{menu.name}
+			</a>
+		</div>
+	</Gradient>
 </li>
 
 {#if menu.expanded && menu.items}
@@ -59,6 +73,7 @@
 		&__submenu {
 			@apply pl-8 ml-2.5;
 			@apply border-l-2;
+			@apply border-[color:var(--color-text-secondary)];
 		}
 
 		&--expanded {
@@ -66,18 +81,8 @@
 		}
 	}
 
-	.menu__gradient {
-		@apply w-full ml-3 pb-0.5;
-    transition: background-color 1000ms linear;
-
-		&:active {
-			@apply bg-gradient-to-r from-[color:var(--color-primary)] via-[color:var(--color-secondary)] to-[color:var(--color-tertiary)];
-      
-		}
-	}
-
 	.menu__label {
-		@apply block bg-[color:var(--color-intermediate-background)];
+		@apply block;
 
 		&--hover {
 			@apply text-[color:var(--color-text-highlighted)] font-black;
