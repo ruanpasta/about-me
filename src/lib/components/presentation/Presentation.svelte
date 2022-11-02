@@ -6,7 +6,7 @@
 </script>
 
 <Gradient class={externalClass} show={true}>
-  <div class="container">
+  <div class="presentation">
     <span class="name">RUAN PASTA</span>
     <span class="role">Frontend Developer</span>
   </div>
@@ -14,7 +14,7 @@
 
 
 <style lang="scss">
-  .container {
+  .presentation {
     @apply flex flex-col p-2;
     @apply font-semibold;
   }

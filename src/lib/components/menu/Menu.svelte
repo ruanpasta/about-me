@@ -53,7 +53,7 @@
 <style lang="scss">
 	.menu {
 		@apply text-[color:var(--color-secondary)];
-		@apply rounded-b-[30px] z-10;
+		@apply rounded-b-[30px];
 
 		&__list {
 			@apply flex flex-col gap-4;
@@ -70,7 +70,7 @@
 	}
 
 	.gradient {
-		@apply fixed top-0 left-0 w-full;
+		@apply fixed top-0 left-0 w-full z-10;
 		@apply pb-0.5 rounded-b-[30px];
 		@apply bg-gradient-to-r from-[color:var(--color-primary)] via-[color:var(--color-secondary)] to-[color:var(--color-tertiary)];
 	}

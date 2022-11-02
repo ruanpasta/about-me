@@ -7,6 +7,7 @@
   import "../app.scss";
   import Header from "./Header.svelte";
   import { theme } from '$lib/stores/theme'
+  import { Links } from "$lib/components"
 </script>
 
 <div class="app">
@@ -15,6 +16,10 @@
   <main>
     <slot />
   </main>
+
+  <footer>
+    <Links class="fixed bottom-2 left-2" />
+  </footer>
 </div> 
 
 <style lang="scss">

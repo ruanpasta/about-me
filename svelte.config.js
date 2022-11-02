@@ -14,6 +14,7 @@ const config = {
     alias: {
       '$helpers': './src/helpers',
       '$styles': './static/styles',
+      '$icons': './src/lib/components/common/icons',
     }
 	}
 };
