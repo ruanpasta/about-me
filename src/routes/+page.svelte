@@ -3,13 +3,13 @@
 </script>
 
 <div class="flex justify-center justify-items-center">
-  <div class="container">
+  <div class="presentation">
     <Presentation class="w-full" />
   </div>
 </div>
 
 <style lang="scss">
-  .container {
-    @apply flex justify-center justify-items-center px-4;
+  .presentation {
+    @apply w-full px-4 absolute top-1/3;
   }
 </style>

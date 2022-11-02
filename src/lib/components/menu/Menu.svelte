@@ -53,7 +53,7 @@
 <style lang="scss">
 	.menu {
 		@apply text-[color:var(--color-secondary)];
-		@apply rounded-b-[30px];
+		@apply rounded-b-[30px] z-10;
 
 		&__list {
 			@apply flex flex-col gap-4;

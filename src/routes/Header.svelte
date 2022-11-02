@@ -42,3 +42,9 @@
     { name: 'About me', icon: InformationOutline, path: '' }
 	]
 </script>
+
+<style lang="scss">
+  :global(.logo) {
+    @apply text-2xl font-black text-[color:var(--color-primary)];
+  }
+</style>

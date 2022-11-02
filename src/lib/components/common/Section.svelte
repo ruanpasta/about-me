@@ -1,10 +1,10 @@
-<section class={className}>
+<section class={externalClass}>
   <slot />
 </section>
 
 <script>
-    let className = ''
-    export { className as class }
+    let externalClass = ''
+    export { externalClass as class }
 </script>
 
 <style lang="scss">
