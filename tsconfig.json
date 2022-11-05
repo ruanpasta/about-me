@@ -11,7 +11,7 @@
 		"strict": true,
 
 	},
-  "include": ["src/**/*.ts", "src/**/*.svelte"],
+  "include": ["src/**/*.ts", "src/**/*.svelte", "src/routes/works/[id]/+page.js", "src/routes/works/[id]/+page.js", "src/routes/works/[id]/+page.js", "src/routes/works/[id]/+page.js"],
   "exclude": ["node_modules/*", "**/*.spec.ts"],
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//

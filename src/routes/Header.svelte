@@ -23,23 +23,23 @@
 
 	let menus: MenuItem[] = [
 		{
-			name: 'Work',
+			name: 'Works',
 			icon: PackageVariantClosed,
 			path: '',
 			items: [
         {
           name: 'Weather now',
-          path: '',
+          path: '/works/weather-now',
         },
         {
           name: 'Other',
-          path: ''
+          path: '/works/other'
         },
       ]
     },
-    { name: 'Skills', icon: BookOpenPageVariantOutline, path: '' },
-    { name: 'Experience', icon: BriefcaseOutline, path: '' },
-    { name: 'About me', icon: InformationOutline, path: '' }
+    { name: 'Skills', icon: BookOpenPageVariantOutline, path: '/skills' },
+    { name: 'Experience', icon: BriefcaseOutline, path: '/experience' },
+    { name: 'About me', icon: InformationOutline, path: '/about-me' }
 	]
 </script>
 

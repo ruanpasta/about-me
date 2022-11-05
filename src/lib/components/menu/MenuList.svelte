@@ -46,15 +46,16 @@
 			on:mouseenter={() => (showHover = true)}
 			on:mouseleave={() => (showHover = false)}
 		>
-			<a
-				href="/#"
+			<svelte:element
+				this={menu.path ? 'a' : 'span'}
+        href={menu.path}
 				class={classMap({
 					menu__label: true,
 					'menu__label--hover': showHover
 				})}
 			>
 				{menu.name}
-			</a>
+			</svelte:element>
 		</div>
 	</Gradient>
 </li>
