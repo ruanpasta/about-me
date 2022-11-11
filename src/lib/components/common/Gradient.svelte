@@ -31,6 +31,10 @@
   .gradient {
     @apply bg-gradient-to-r from-[color:var(--color-primary)] via-[color:var(--color-secondary)] to-[color:var(--color-tertiary)];
 
+    &:hover {
+      @apply bg-gradient-to-r from-[color:var(--color-tertiary)] via-[color:var(--color-secondary)] to-[color:var(--color-primary)];
+    }
+
     &--bottom {
       @apply pb-0.5;
     }

@@ -4,6 +4,7 @@ import type { PageLoad } from './$types'
 export const load: PageLoad = ({ params }) => {
 	if (params.id === 'weather-now') {
 		return {
+      title: 'Weather now',
 			description: 'Welcome to our blog. Lorem ipsum dolor sit amet...',
 			links: [
 				{ label: 'Github', url: 'https://github.com/ruanpasta/about-me' },
@@ -13,7 +14,23 @@ export const load: PageLoad = ({ params }) => {
 				}
 			]
 		}
-	}
+	} else if (params.id === 'about-me') {
+		return {
+      title: 'About me',
+			description: 'Welcome to our blog. Lorem ipsum dolor sit amet...',
+			links: [
+				{ label: 'View site', url: 'https://github.com/ruanpasta' },
+				{
+					label: 'Github',
+					url:'https://github.com/ruanpasta/about-me'
+				},
+				{
+					label: 'Board',
+					url:'https://github.com/ruanpasta/about-me'
+				},
+			]
+		}
+  }
 
 	throw error(404, 'Not found')
 }

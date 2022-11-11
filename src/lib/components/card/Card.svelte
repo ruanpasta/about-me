@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
   import Gradient from "../common/Gradient.svelte"
 
+  export let title: string;
 </script>
 
 <section class="card">
   <Gradient class="card__header" show={true}>
-    <h1 class="card__header__title">This is a Card</h1>
+    <h1 class="card__header__title">{title}</h1>
   </Gradient>
 
   <slot />
@@ -15,7 +16,7 @@
   :global {
     .card {
       @apply m-4 text-xl;
-      
+ 
       &__header {
         @apply mb-4;
       }

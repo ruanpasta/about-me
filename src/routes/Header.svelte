@@ -32,8 +32,8 @@
           path: '/works/weather-now',
         },
         {
-          name: 'Other',
-          path: '/works/other'
+          name: 'About me',
+          path: '/works/about-me'
         },
       ]
     },
