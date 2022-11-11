@@ -4,6 +4,7 @@ import Menu from './menu'
 import { Row, Section, Empty, Gradient } from './common'
 import ThemeSwitch from './themeSwitch/ThemeSwitch.svelte'
 import Links from './links/Links.svelte'
+import Card from './card/Card.svelte'
 
 export {
   Navbar,
@@ -14,5 +15,6 @@ export {
   Empty,
   Presentation,
   Gradient,
-  Links
+  Links,
+  Card
 }

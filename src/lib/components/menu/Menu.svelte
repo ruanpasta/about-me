@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { classMap } from '$helpers/classMap'
+  import { setContext } from 'svelte'
 	import Menu from 'svelte-material-icons/Menu.svelte'
+  import type { MenuContext } from './MenuContext'
 	import MenuList from './MenuList.svelte'
 	import type { MenuItem } from './Menus'
 
@@ -17,6 +19,8 @@
 		showMenu = false
 		menus.forEach(closeExpandedMenu)
 	}
+
+  setContext<MenuContext>('menu', { closeMenu })
 </script>
 
 <!-- TODO: Use Gradient component here -->

@@ -1,12 +1,16 @@
 <script lang="ts">
 	import { classMap } from '$helpers/classMap'
+  import { getContext } from 'svelte'
 	import { Gradient } from '../common'
+  import type { MenuContext } from './MenuContext'
 	import type { MenuItem } from './Menus'
 
 	let className = ''
 	export { className as class }
 	export let menu: MenuItem
 	export let level = 0
+
+  const { closeMenu } = getContext<MenuContext>('menu')
 
 	let showHover = false
 	let isGradient = false
@@ -18,6 +22,7 @@
 	}
 
 	const itemClicked = () => {
+    if (!menu.items?.length) return closeMenu?.()
 		menu.expanded = !menu.expanded
 		showGradient()
 	}

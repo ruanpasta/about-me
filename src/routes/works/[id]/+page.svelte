@@ -1,13 +1,14 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
+	import { Card } from '$lib/components'
 	import type { PageData } from './$types'
 
 	export let data: PageData
-
-	onMount(() => console.log(data))
 </script>
 
 <div>
-	{data?.title}
-	{data?.content}
+	<Card>
+    {data?.description}
+    {data?.links?.[0].label}
+    {data?.links?.[1].label}
+  </Card>
 </div>
