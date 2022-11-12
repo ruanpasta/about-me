@@ -7,6 +7,7 @@
 </script>
 
 <button
+  type="button"
   class="button"
   on:click={onClick}
 >
@@ -18,18 +19,20 @@
 </button>
 
 <style lang="scss">
-  .button {
-    @apply mr-4 my-4;
+  :global {
+    .button {
+      @apply mr-4 my-4;
 
-    &__container {
-      @apply mb-4;
-    }
+      &__container {
+        @apply mb-4;
+      }
 
-    &__container__content {
-      @apply pb-2;
-
-      &:hover {
-        @apply font-bold;
+      &__container__content {
+        @apply pb-2;
+  
+        &:hover {
+          @apply font-bold;
+        }
       }
     }
   }
