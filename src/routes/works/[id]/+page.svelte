@@ -8,15 +8,13 @@
     window.open(url, '_blank')
 </script>
 
-<div>
-	<Card title={data?.title}>
-    {data?.description}
-    <div>
-      {#each data?.links as link}
-        <Button onClick={() => navigate(link.url)}>
-          {link.label}
-        </Button>
-      {/each}
-    </div>
-  </Card>
-</div>
+<Card title={data?.title}>
+  {data?.description}
+  <div>
+    {#each data?.links as link}
+      <Button onClick={() => navigate(link.url)}>
+        {link.label}
+      </Button>
+    {/each}
+  </div>
+</Card>

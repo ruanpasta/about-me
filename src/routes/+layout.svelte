@@ -18,12 +18,16 @@
   </main>
 
   <footer>
-    <Links class="fixed bottom-2 left-2" />
+    <Links class="links" />
   </footer>
 </div> 
 
 <style lang="scss">
   .app {
     @apply box-border m-0 p-0 h-full w-full;
+  }
+
+  :global(.links) {
+    @apply fixed bottom-4 left-4;
   }
 </style>
