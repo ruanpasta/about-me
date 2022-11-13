@@ -4,6 +4,7 @@
   export let title: string;
 </script>
 
+<!-- TODO: Use Section component here -->
 <section class="card">
   <Gradient class="card__header" show={true}>
     <h1 class="card__header__title">{title}</h1>

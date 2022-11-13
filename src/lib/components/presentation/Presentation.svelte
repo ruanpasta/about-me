@@ -8,7 +8,7 @@
 <Gradient class={externalClass} show={true}>
   <div class="presentation">
     <span class="name">RUAN PASTA</span>
-    <span class="role">Frontend Developer</span>
+    <span class="role">Software Engenier</span>
   </div>
 </Gradient>
 

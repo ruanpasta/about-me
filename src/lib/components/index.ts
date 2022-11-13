@@ -6,6 +6,7 @@ import ThemeSwitch from './theme-switch/ThemeSwitch.svelte'
 import Links from './links/Links.svelte'
 import Card from './card/Card.svelte'
 import Button from './button/Button.svelte'
+import Accordion from './accordion/Accordion.svelte'
 
 export {
 	Navbar,
@@ -18,5 +19,6 @@ export {
 	Gradient,
 	Links,
 	Card,
-  Button
+  Button,
+  Accordion
 }

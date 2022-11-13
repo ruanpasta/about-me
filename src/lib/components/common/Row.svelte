@@ -1,7 +1,6 @@
 <div class={classMap({
-  [className]: true,
   'ab-row': true,
-  'ab-row--gradient': true,
+  [className]: true,
 })}>
   <slot />
 </div>
