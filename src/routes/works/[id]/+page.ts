@@ -5,7 +5,7 @@ export const load: PageLoad = ({ params }) => {
 	if (params.id === 'weather-now') {
 		return {
 			title: 'Weather now',
-			description: 'Welcome to our blog. Lorem ipsum dolor sit amet...',
+			description: 'Este projeto tem como intuido atender ao desafio Weater now, onde será criado uma página para apresentar informações climáticas de algumas específicas cidades.',
 			links: [
 				{ label: 'Github', url: 'https://github.com/ruanpasta/about-me' },
 				{

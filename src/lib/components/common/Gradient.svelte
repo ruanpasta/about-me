@@ -2,9 +2,10 @@
   import { classMap } from "$helpers/classMap"
 
   export let show = false
-  export let direction: 'bottom' | 'top' | 'left' | 'right' = 'bottom'
+  export let position: 'bottom' | 'top' | 'left' | 'right' | 'all' = 'bottom'
   export let filled = false
   export let backgroundColor = ''
+  export let rounded = false
 
   let externalClass = ''
   export { externalClass as class }
@@ -13,13 +14,16 @@
 <div class={classMap({
   [externalClass]: true,
   gradient: show,
-  'gradient--bottom': direction === 'bottom',
-  'gradient--top': direction === 'top',
-  'gradient--left': direction === 'left',
-  'gradient--right': direction === 'right',
+  'gradient--bottom': position === 'bottom',
+  'gradient--top': position === 'top',
+  'gradient--left': position === 'left',
+  'gradient--right': position === 'right',
+  'gradient--all': position === 'all',
+  'gradient--rounded': position === 'all' && rounded
 })}>
   <div class={classMap({
     overlaid: !filled,
+    'gradient--rounded': position === 'all' && rounded
   })}
   style={`background-color: ${backgroundColor};`}
   >
@@ -49,6 +53,14 @@
   
     &--right {
       @apply pr-0.5;
+    }
+
+    &--all {
+      @apply p-0.5;
+    }
+
+    &--rounded {
+      @apply rounded-full
     }
   }
 
