@@ -26,6 +26,6 @@
 	}
 
 	.work__links {
-		@apply mx-10;
+		@apply mx-10 my-4;
 	}
 </style>

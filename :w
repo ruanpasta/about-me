@@ -1,0 +1,60 @@
+<script lang="ts">
+	import { Card, Accordion, Row, Badge } from '$lib/components'
+
+  const items = [
+    {
+      company: 'Senior Sistemas',
+      opened: true,
+      roleDescription: 'Desenvolvo as solucoes de frontend, principalmente focado no projeto Widget com as tecnologias Vuejs/Nuxt e Svelte.',
+      entree: '2018',
+      leave: '2022',
+      tecnologies: [
+        'Vue',
+        'Svelte',
+        'Flutter',
+        'TailwindCSS',
+        'Javascript',
+        'Typescript'
+      ]
+    },
+    {
+      company: 'Octadesk',
+      opened: false,
+      roleDescription: 'Desenvolvo as solucoes de frontend, principalmente focado no projeto Widget com as tecnologias Vuejs/Nuxt e Svelte.',
+      entree: '2022',
+      leave: null
+    },
+  ]
+
+  const getSubTitle = (entree: string, leave: string) =>
+    `${entree}-${leave ?? 'Present'}`
+</script>
+
+<Card title={'Experience'}>
+  {#each items as item}
+    <Accordion
+      title={item.company}
+      subTitle={getSubTitle(item.entree, item.leave)}
+      opened={item.opened}
+    >
+      <Row class="content" justify="start">
+        <a href="">Links</a>
+        <a href="">Links</a>
+      </Row>
+      <Row class="content">
+        <p>{item.roleDescription}</p>
+      </Row>
+      <Row class="content" justify="start">
+        {#each item?.tecnologies as tecnology}
+          <Badge label={tecnology} />
+        {/each} 
+      </Row>
+    </Accordion>
+  {/each}
+</Card>
+
+<style lang="scss">
+  :global(.content) {
+    @apply mt-2;
+  }
+</style>

@@ -1,29 +1,34 @@
 <script lang="ts">
 	import { Gradient, Row } from '../common'
 
-  export let list: any[] =[{}, {}];
+  export let title: string
+  export let subTitle: string
+  export let opened = false
+  export let onClick = () => {}
+
+  $: icon = opened ? '-' : '+'
 </script>
 
-{#each list as item}
-  <div class="accordion">
-    <Gradient class="accordion__header" show={true} filled>
+<div class="accordion">
+  <svelte:element
+    this="button"
+    class="accordion__header"
+    on:click={onClick}
+  >
+    <Gradient class="accordion__header__gradient" show={true} filled>
       <Row class="accordion__header__content">
-        <h2>Senior Sistemas</h2>
-        +
+        <h2>{title}</h2>
+        <Row class="accordion__header__content__subsection" justify="end">
+          <h3>{subTitle}</h3>
+          {icon}
+        </Row>
       </Row>
     </Gradient>
-    <Row class="accordion__links" justify="start">
-      <a href="">Links</a>
-      <a href="">Links</a>
-    </Row>
-    <Row>
-      <p>Content</p>
-    </Row>
-    <Row>
-      <p>badges</p>
-    </Row>
-  </div>
-{/each}
+  </svelte:element>
+  {#if opened}
+    <slot />
+  {/if}
+</div>
 
 <style lang="scss">
   .accordion {
@@ -33,10 +38,22 @@
 
   :global {
     .accordion__header {
-      @apply rounded-lg;
+      @apply cursor-pointer w-full;
+
+      &__gradient {
+        @apply rounded-lg;
+      }
 
       &__content {
         @apply p-4 font-semibold;
+      }
+
+      &__content__subsection {
+        @apply max-w-[20%];
+      }
+
+      &__content__subsection h3 {
+        @apply text-base mr-2;
       }
     }
 
