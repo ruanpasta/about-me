@@ -9,7 +9,7 @@
       opened: true,
       roleDescription: 'Desenvolvo as solucoes de frontend, principalmente focado no projeto Widget com as tecnologias Vuejs/Nuxt e Svelte.',
       entree: '2022',
-      leave: null,
+      leave: '',
       links: [
         { label: 'Remote', url: '', iconComponent: MapMarker },
         { label: 'octadesk.com', url: 'https://octadesk.com', iconComponent: OpenInNew },

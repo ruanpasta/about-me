@@ -5,7 +5,7 @@
   export let link = false
   export let onClick = () => {}
 
-  let externalClass: string;
+  let externalClass = ''
   export { externalClass as class}
 
   let invertedGradient = false
