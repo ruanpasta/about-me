@@ -55,7 +55,7 @@
 			}
 
 			&__content__subsection {
-				@apply max-w-[25%];
+				@apply max-w-[40%];
 			}
 
 			&__content__subsection h3 {

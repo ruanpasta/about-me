@@ -8,7 +8,7 @@
 </script>
 
 <Card title={data?.title}>
-	<p class="work__resume">
+	<p>
 		{data?.description}
 	</p>
 	<div class="work__links">
@@ -21,11 +21,7 @@
 </Card>
 
 <style lang="scss">
-	.work__resume {
-		@apply mx-10 text-justify;
-	}
-
 	.work__links {
-		@apply mx-10 my-4;
+		@apply my-4;
 	}
 </style>

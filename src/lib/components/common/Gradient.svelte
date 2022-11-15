@@ -34,16 +34,14 @@
 
 <style lang="scss">
   .gradient {
+    @apply transition ease-in-out delay-150;
     @apply bg-gradient-to-r from-primary via-secondary/50 to-tertiary/25;
-
-    &:hover {
-      @apply bg-gradient-to-r from-tertiary via-secondary/50 to-primary;
-    }
+    @apply hover:bg-primary duration-500;
 
     &--bottom {
       @apply pb-0.5;
     }
-  
+
     &--top {
       @apply pt-0.5;
     }

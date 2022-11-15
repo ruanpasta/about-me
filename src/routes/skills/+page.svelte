@@ -21,7 +21,7 @@
 </script>
 
 <Card title={'Skills'}>
-	<p class="skills__resume">
+	<p>
 		Ola, sou um amante do ecosistema JS/TS e tudo que os envolve, mas estou em
 		uma constante busca de novos conhecimentos, nas areas de Backend, Devops,
 		Design e tambem no desenvolvimento de games. Veja algumas das tecnologias
@@ -57,9 +57,5 @@
 		&__tecnologies__item--highlighted {
 			@apply font-bold text-highlighted uppercase;
 		}
-	}
-
-	.skills__resume {
-		@apply mx-10 text-justify;
 	}
 </style>
