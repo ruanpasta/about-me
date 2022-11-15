@@ -44,8 +44,8 @@
 
 	<Gradient
 		class="w-full ml-3"
+    bgClass="bg-background-intermediate"
 		show={isGradient}
-		backgroundColor="var(--color-intermediate-background)"
 	>
 		<div
 			on:mouseenter={() => (showHover = true)}
@@ -74,16 +74,16 @@
 <style lang="scss">
 	.menu {
 		@apply flex items-center gap-2 text-2xl cursor-pointer;
-		@apply text-[color:var(--color-text)];
+		@apply text-default;
 
 		&__submenu {
 			@apply pl-8 ml-2.5;
 			@apply border-l-2;
-			@apply border-[color:var(--color-text-secondary)];
+			@apply border-disabled;
 		}
 
 		&--expanded {
-			@apply text-[color:var(--color-text)];
+			@apply text-default;
 		}
 	}
 
@@ -91,7 +91,7 @@
 		@apply block;
 
 		&--hover {
-			@apply text-[color:var(--color-text-highlighted)] font-black;
+			@apply text-highlighted font-black;
 		}
 	}
 </style>

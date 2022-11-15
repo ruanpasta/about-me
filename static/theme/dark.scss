@@ -1,10 +1,12 @@
-:root {
-  --color-background: #151515;
-  --color-intermediate-background: #1A1A1C;
-  --color-text: #D1D1D1;
-  --color-text-highlighted: #FFFFFF;
-  --color-text-secondary: #565656;
-  --color-primary: #FF7A00;
-  --color-secondary: #DD0000;
-  --color-tertiary: #0031E0;
+@layer base {
+  :root {
+    --color-background: 21 21 21;
+    --color-intermediate-background: 31 31 31;
+    --color-text: 211 211 211;
+    --color-text-highlighted: 255 255 255;
+    --color-text-secondary: 91 91 91;
+    --color-primary: 255 122 0;
+    --color-secondary: 221 0 0;
+    --color-tertiary: 0 49 224;
+  }
 }

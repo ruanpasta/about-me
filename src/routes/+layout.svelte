@@ -28,7 +28,7 @@
   }
 
   :global(.links) {
-    @apply fixed bottom-2 left-2 p-2 rounded-2xl bg-[color:var(--color-background)];
+    @apply fixed bottom-2 left-2 p-2 rounded-2xl bg-background;
   }
 
 </style>

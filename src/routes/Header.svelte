@@ -1,7 +1,9 @@
 <header>
   <Navbar>
     <Row>
-      <Section class="logo">RP</Section>
+      <Section class="logo">
+        <a href="/">RP</a>
+      </Section>
       <Section>
         <Menu {menus} />
       </Section>
@@ -45,6 +47,6 @@
 
 <style lang="scss">
   :global(.logo) {
-    @apply text-2xl font-black text-[color:var(--color-primary)];
+    @apply text-2xl font-black text-primary;
   }
 </style>

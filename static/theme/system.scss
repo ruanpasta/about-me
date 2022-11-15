@@ -1,26 +1,29 @@
-// TODO: improve the light color palette
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-background: #D1D1D1;
-    --color-intermediate-background: #B1B1B1;
-    --color-text: #151515;
-    --color-text-highlighted: #000000;
-    --color-text-secondary: #0E0E0E;
-    --color-primary: #0031E0;
-    --color-secondary: #DD0000;
-    --color-tertiary: #FF7A00;
+@layer base {
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-background: 211 211 211;
+      --color-intermediate-background: 181 181 181;
+      --color-text: 21 21 21;
+      --color-text-highlighted: 0 0 0;
+      --color-text-secondary: 14 14 14;
+      --color-primary: 0 49 224;
+      --color-secondary: 221 0 0;
+      --color-tertiary: 255 122 0;
+    }
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #151515;
-    --color-intermediate-background: #1A1A1C;
-    --color-text: #D1D1D1;
-    --color-text-highlighted: #FFFFFF;
-    --color-text-secondary: #565656;
-    --color-primary: #FF7A00;
-    --color-secondary: #DD0000;
-    --color-tertiary: #0031E0;
+@layer base {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-background: 21 21 21;
+      --color-intermediate-background: 31 31 31;
+      --color-text: 211 211 211;
+      --color-text-highlighted: 255 255 255;
+      --color-text-secondary: 91 91 91;
+      --color-primary: 255 122 0;
+      --color-secondary: 221 0 0;
+      --color-tertiary: 0 49 224;
+    }
   }
 }

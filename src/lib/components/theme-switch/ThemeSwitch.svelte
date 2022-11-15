@@ -62,6 +62,6 @@
 <style lang="scss">
 	.icon {
 		@apply w-6 h-6 p-1 rounded-full;
-		@apply text-[color:var(--color-background)] bg-[color:var(--color-text)];
+		@apply text-background bg-default;
 	}
 </style>

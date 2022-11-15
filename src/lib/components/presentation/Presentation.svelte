@@ -20,7 +20,7 @@
   }
 
   .name {
-    @apply bg-gradient-to-r from-[color:var(--color-primary)] via-[color:var(--color-secondary)] to-[color:var(--color-tertiary)];
+    @apply bg-gradient-to-r from-primary via-secondary to-tertiary;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

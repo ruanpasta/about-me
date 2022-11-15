@@ -56,16 +56,16 @@
 
 <style lang="scss">
 	.menu {
-		@apply text-[color:var(--color-secondary)];
+		@apply text-secondary;
 		@apply rounded-b-[30px];
 
 		&__list {
 			@apply flex flex-col gap-4;
-			@apply bg-[color:var(--color-intermediate-background)];
+			@apply bg-background-intermediate;
 		}
 
 		&--open {
-			@apply p-4 text-[color:var(--color-primary)];
+			@apply p-4 text-default;
 		}
 
 		.menu__list__items {
@@ -76,6 +76,6 @@
 	.gradient {
 		@apply fixed top-0 left-0 w-full z-10;
 		@apply pb-0.5 rounded-b-[30px];
-		@apply bg-gradient-to-r from-[color:var(--color-primary)] via-[color:var(--color-secondary)] to-[color:var(--color-tertiary)];
+		@apply bg-gradient-to-r from-primary via-secondary to-tertiary;
 	}
 </style>

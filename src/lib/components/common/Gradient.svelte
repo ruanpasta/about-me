@@ -5,11 +5,11 @@
   export let show = false
   export let position: 'bottom' | 'top' | 'left' | 'right' | 'all' = 'bottom'
   export let filled = false
-  export let backgroundColor = ''
   export let rounded = false
 
   let externalClass = ''
   export { externalClass as class }
+  export let bgClass = ''
 </script>
 
 <div class={classMap({
@@ -23,10 +23,10 @@
   'gradient--rounded': position === 'all' && rounded
 })}>
   <div class={classMap({
-    overlaid: !filled,
+    [bgClass]: true,
+    overlaid: !filled && !bgClass,
     'gradient--rounded': position === 'all' && rounded
   })}
-  style={`background-color: ${backgroundColor};`}
   >
     <slot />
   </div>
@@ -34,10 +34,10 @@
 
 <style lang="scss">
   .gradient {
-    @apply bg-gradient-to-r from-[color:var(--color-primary)] via-[color:var(--color-secondary)] to-[color:var(--color-tertiary)];
+    @apply bg-gradient-to-r from-primary via-secondary/50 to-tertiary/25;
 
     &:hover {
-      @apply bg-gradient-to-r from-[color:var(--color-tertiary)] via-[color:var(--color-secondary)] to-[color:var(--color-primary)];
+      @apply bg-gradient-to-r from-tertiary via-secondary/50 to-primary;
     }
 
     &--bottom {
@@ -66,6 +66,6 @@
   }
 
   .overlaid {
-    @apply bg-[color:var(--color-background)];
+    @apply bg-background;
   }
 </style>

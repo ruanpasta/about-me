@@ -6,9 +6,7 @@
   export let onClick = () => {}
 
   let externalClass = ''
-  export { externalClass as class}
-
-  let invertedGradient = false
+  export { externalClass as class }
 </script>
 
 <button

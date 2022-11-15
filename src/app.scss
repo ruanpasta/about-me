@@ -8,5 +8,5 @@
 }
 
 body {
-  @apply h-full w-full text-[color:var(--color-text)]  bg-[color:var(--color-background)]  font-base;
+  @apply h-full w-full text-default bg-background font-base;
 }
