@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { classMap } from '$helpers/classMap'
 	import Card from '$lib/components/card/Card.svelte'
+  import type { Technologies } from 'src/global'
 
-	// TODO: Crerate type for tecnologies
-	const tecnologies: any[] = [
+	const technologies: Technologies[] = [
 		{ label: 'github', highlighted: false },
 		{ label: 'angular', highlighted: true },
 		{ label: 'sass', highlighted: false },
@@ -28,12 +28,12 @@
 		que uso:
 	</p>
 	<div class="skills">
-		<div class="skills__tecnologies">
-			{#each tecnologies as technology}
+		<div class="skills__technologies">
+			{#each technologies as technology}
 				<span
 					class={classMap({
-						skills__tecnologies__item: true,
-						'skills__tecnologies__item--highlighted': technology.highlighted
+						skills__technologies__item: true,
+						'skills__technologies__item--highlighted': technology.highlighted
 					})}>{technology.label}</span
 				>
 			{/each}
@@ -46,15 +46,15 @@
 		@apply flex justify-center pt-8;
 		@apply text-disabled;
 
-		&__tecnologies {
+		&__technologies {
 			@apply flex flex-wrap justify-center max-w-xs;
 		}
 
-		&__tecnologies__item {
+		&__technologies__item {
 			@apply m-4;
 		}
 
-		&__tecnologies__item--highlighted {
+		&__technologies__item--highlighted {
 			@apply font-bold text-highlighted uppercase;
 		}
 	}

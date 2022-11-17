@@ -1,7 +1,8 @@
 import { error } from '@sveltejs/kit'
 import type { PageLoad } from './$types'
+import type { Work } from './Work'
 
-export const load: PageLoad = ({ params }) => {
+export const load: PageLoad = ({ params }): Work => {
 	if (params.id === 'weather-now') {
 		return {
 			title: 'Weather now',
