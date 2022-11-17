@@ -1,10 +1,7 @@
-const { default: pallete } = require('./pallete.cjs');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    // colors: { ...pallete },
     colors: {
       background: 'rgb(var(--color-background) / <alpha-value>)',
       'background-intermediate': 'rgb(var(--color-intermediate-background) / <alpha-value>)',
@@ -14,6 +11,9 @@ module.exports = {
       primary: 'rgb(var(--color-primary) / <alpha-value>)',
       secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
       tertiary: 'rgb(var(--color-tertiary) / <alpha-value>)',
+      white: 'rgb(211, 211, 211)',
+      gray: 'rgb(var(--color-gray) / <alpha-value>)',
+      transparent: 'transparent',
     },
     extend: {
       fontFamily: {

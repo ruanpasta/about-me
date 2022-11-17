@@ -10,3 +10,21 @@
 body {
   @apply h-full w-full text-default bg-background font-base;
 }
+
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply border-2 border-solid border-transparent border-y-4;
+  @apply bg-clip-padding;
+  @apply bg-gradient-to-b from-primary/50 via-secondary/25 to-tertiary/25;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-corner {
+  @apply hidden;
+}

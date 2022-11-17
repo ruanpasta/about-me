@@ -90,7 +90,7 @@
 	const getSubTitle = (entree: string, leave: string) =>
 		`${entree}-${leave || 'Present'}`
 
-	const navigate = (url: string) => url ?? window.open(url, '_blank')
+	const navigate = (url: string) => url && window.open(url, '_blank')
 </script>
 
 <Card title={'Experience'}>

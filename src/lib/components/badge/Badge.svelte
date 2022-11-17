@@ -6,8 +6,8 @@
 
 <style lang="scss">
   .badge {
-    @apply text-lg lowercase;
+    @apply text-lg lowercase text-default;
     @apply px-2 mr-2 mb-2 rounded-2xl;
-    @apply bg-disabled;
+    @apply bg-gray;
   }
 </style>

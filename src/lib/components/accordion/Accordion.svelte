@@ -43,7 +43,7 @@
 			@apply cursor-pointer w-full;
       
       h2 {
-        @apply text-highlighted;
+        @apply text-white;
       }
 
 			&__gradient {

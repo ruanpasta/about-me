@@ -1,6 +1,6 @@
 # About-me
 
-> In this project I'll go to create my portfolio. Here you can se some information about me and my skills and also some projects that I developed.
+> In this project I'll go to create my portfolio. Here you can see some information about me and my skills and also some projects that I developed.
 
 Links:
  - 📃 [Notion](https://www.notion.so/ruanpasta-website-7f0318ddf62a40e88ef5747ff71f3e53)
