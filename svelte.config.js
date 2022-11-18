@@ -15,6 +15,7 @@ const config = {
       '$helpers': './src/helpers',
       '$styles': './static/styles',
       '$icons': './src/lib/components/common/icons',
+      '$services': './src/services',
     }
 	}
 };

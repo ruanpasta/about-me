@@ -54,6 +54,7 @@
 			<svelte:element
 				this={menu.path ? 'a' : 'span'}
         href={menu.path}
+        sveltekit:prefetch
 				class={classMap({
 					menu__label: true,
 					'menu__label--hover': showHover

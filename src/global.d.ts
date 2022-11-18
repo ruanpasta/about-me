@@ -6,6 +6,12 @@ interface Links {
   component?: any;
 }
 
+interface Work {
+  title: string;
+  description: string;
+  links: Links[]
+}
+
 interface Technologies {
   label: string;
   highlighted?: boolean;
@@ -22,4 +28,4 @@ interface Experiences {
 }
 
 export type { Theme }
-export { Experiences, Links, Technologies }
+export { Experiences, Work, Technologies, Links }
