@@ -1,31 +1,17 @@
 <script lang="ts">
 	import { classMap } from '$helpers/classMap'
 	import Card from '$lib/components/card/Card.svelte'
-  import type { Technologies } from 'src/global'
+  import type { PageData } from './$types'
 
-	const technologies: Technologies[] = [
-		{ label: 'github', highlighted: false },
-		{ label: 'angular', highlighted: true },
-		{ label: 'sass', highlighted: false },
-		{ label: 'flutter', highlighted: true },
-		{ label: 'css', highlighted: false },
-		{ label: 'vue', highlighted: true },
-		{ label: 'html', highlighted: false },
-		{ label: 'react', highlighted: true },
-		{ label: 'sql', highlighted: false },
-		{ label: 'ui', highlighted: false },
-		{ label: 'svelte', highlighted: true },
-		{ label: 'npm/yarn', highlighted: false },
-		{ label: 'neovim', highlighted: false }
-	]
+	export let data: PageData
+
+  $: description = data?.description || ''
+  $: technologies = data?.technologies || []
 </script>
 
 <Card title={'Skills'}>
 	<p>
-		Ola, sou um amante do ecosistema JS/TS e tudo que os envolve, mas estou em
-		uma constante busca de novos conhecimentos, nas areas de Backend, Devops,
-		Design e tambem no desenvolvimento de games. Veja algumas das tecnologias
-		que uso:
+		{description}
 	</p>
 	<div class="skills">
 		<div class="skills__technologies">

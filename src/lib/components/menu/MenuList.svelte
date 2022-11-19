@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { prefetch } from '$app/navigation'
 	import { classMap } from '$helpers/classMap'
   import { getContext } from 'svelte'
 	import { Gradient } from '../common'
@@ -51,17 +52,16 @@
 			on:mouseenter={() => (showHover = true)}
 			on:mouseleave={() => (showHover = false)}
 		>
-			<svelte:element
-				this={menu.path ? 'a' : 'span'}
+			<a
+        data-sveltekit-prefetch
         href={menu.path}
-        sveltekit:prefetch
 				class={classMap({
 					menu__label: true,
 					'menu__label--hover': showHover
 				})}
 			>
 				{menu.name}
-			</svelte:element>
+			</a>
 		</div>
 	</Gradient>
 </li>

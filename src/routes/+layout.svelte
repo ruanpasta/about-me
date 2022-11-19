@@ -13,7 +13,7 @@
 <div class="app">
   <Header />
 
-  <main data-sveltekit-prefetch>
+  <main>
     <slot />
   </main>
 

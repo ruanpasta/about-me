@@ -12,20 +12,25 @@ interface Work {
   links: Links[]
 }
 
-interface Technologies {
+interface Technology {
   label: string;
   highlighted?: boolean;
 }
 
-interface Experiences {
+interface Skills {
+  description: string;
+  technologies: Technology[];
+}
+
+interface Experience {
   company: string;
   opened: boolean;
   roleDescription: string;
   entree: string;
   leave: string;
   links: Links[]
-  technologies: Technologies[]
+  technologies: Technology[]
 }
 
 export type { Theme }
-export { Experiences, Work, Technologies, Links }
+export { Experience, Work, Skills, Technology, Links }

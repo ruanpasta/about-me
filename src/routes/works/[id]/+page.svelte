@@ -4,15 +4,17 @@
 
 	export let data: PageData
 
+  $: title = data?.title || ''
+  $: description = data?.description || ''
+  $: links = data?.links || []
+
 	const navigate = (url: string) => window.open(url, '_blank')
 </script>
 
-<Card title={data?.title}>
-	<p>
-		{data?.description}
-	</p>
+<Card {title}>
+	<p>{description}</p>
 	<div class="work__links">
-		{#each data?.links as link}
+		{#each links as link}
 			<Button onClick={() => navigate(link.url)}>
 				{link.label}
 			</Button>
