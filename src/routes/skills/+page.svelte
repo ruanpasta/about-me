@@ -2,6 +2,7 @@
 	import { classMap } from '$helpers/classMap'
 	import Card from '$lib/components/card/Card.svelte'
   import type { PageData } from './$types'
+	import { t } from '$lib/translations'
 
 	export let data: PageData
 
@@ -9,7 +10,7 @@
   $: technologies = data?.technologies || []
 </script>
 
-<Card title={'Skills'}>
+<Card title={$t('common.menu.skills')}>
 	<p>
 		{description}
 	</p>

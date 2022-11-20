@@ -1,6 +1,7 @@
 <script>
 	import { Card } from '$lib/components'
 	import Gradient from '$lib/components/common/Gradient.svelte'
+	import { t } from '$lib/translations'
 
   const resume = `Prazer, me chamo Ruan Augusto Pasta e atuo como desenvolvedor frontend a
 		mais de 5 anos. Sou um amante do ecosistema JS e tudo o que o engloba, porem
@@ -11,10 +12,10 @@
 		Se quiser me conhecer um pouco mais ou ate mesmo conversar sobre alguma
 		proposta, estou aberto para conversa e para freelances seletos.`
 
-  $: fragmentedResume = resume.split('.')
+  let fragmentedResume = resume.split('.')
 </script>
 
-<Card title={'About me'}>
+<Card title={$t('common.menu.aboutMe')}>
 	<div class="about-me-image">
 		<Gradient
 			class="about-me-image--rounded"

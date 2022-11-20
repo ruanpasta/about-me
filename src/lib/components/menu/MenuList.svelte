@@ -1,17 +1,18 @@
 <script lang="ts">
-  import { prefetch } from '$app/navigation'
+	import { prefetch } from '$app/navigation'
 	import { classMap } from '$helpers/classMap'
-  import { getContext } from 'svelte'
+	import { getContext } from 'svelte'
 	import { Gradient } from '../common'
-  import type { MenuContext } from './MenuContext'
+	import type { MenuContext } from './MenuContext'
 	import type { MenuItem } from './Menus'
+	import { t } from '$lib/translations'
 
 	let className = ''
 	export { className as class }
 	export let menu: MenuItem
 	export let level = 0
 
-  const { closeMenu } = getContext<MenuContext>('menu')
+	const { closeMenu } = getContext<MenuContext>('menu')
 
 	let showHover = false
 	let isGradient = false
@@ -23,7 +24,7 @@
 	}
 
 	const itemClicked = () => {
-    if (!menu.items?.length) return closeMenu?.()
+		if (!menu.items?.length) return closeMenu?.()
 		menu.expanded = !menu.expanded
 		showGradient()
 	}
@@ -45,7 +46,7 @@
 
 	<Gradient
 		class="w-full ml-3"
-    bgClass="bg-background-intermediate"
+		bgClass="bg-background-intermediate"
 		show={isGradient}
 	>
 		<div
@@ -53,14 +54,14 @@
 			on:mouseleave={() => (showHover = false)}
 		>
 			<a
-        data-sveltekit-prefetch
-        href={menu.path}
+				data-sveltekit-prefetch
+				href={menu.path}
 				class={classMap({
 					menu__label: true,
 					'menu__label--hover': showHover
 				})}
 			>
-				{menu.name}
+				{$t(menu.name)}
 			</a>
 		</div>
 	</Gradient>

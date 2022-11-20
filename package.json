@@ -36,6 +36,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-material-icons": "^2.0.4"
+		"svelte-material-icons": "^2.0.4",
+		"sveltekit-i18n": "^2.2.2"
 	}
 }

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Card, Accordion, Row, Badge, Button } from '$lib/components'
 	import type { PageData } from './$types'
+	import { t } from '$lib/translations'
 
 	export let data: PageData
 
@@ -21,7 +22,7 @@
 	const navigate = (url: string) => url && window.open(url, '_blank')
 </script>
 
-<Card title={'Experience'}>
+<Card title={$t('common.menu.experience')}>
 	{#each experiences as item}
 		<Accordion
 			title={item.company}

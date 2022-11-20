@@ -1,14 +1,16 @@
-<script>
+<script lang="ts">
   import { Gradient } from "$lib/components"
 
   let externalClass = ''
   export { externalClass as class }
+  export let name: string
+  export let role: string
 </script>
 
 <Gradient class={externalClass} show={true}>
   <div class="presentation">
-    <span class="name">RUAN PASTA</span>
-    <span class="role">Software Engineer</span>
+    <span class="name">{name}</span>
+    <span class="role">{role}</span>
   </div>
 </Gradient>
 
@@ -20,6 +22,7 @@
   }
 
   .name {
+    @apply uppercase;
     @apply bg-gradient-to-r from-primary via-secondary to-tertiary;
     background-clip: text;
     -webkit-background-clip: text;
