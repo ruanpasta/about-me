@@ -1,3 +1,5 @@
+<!-- TODO: Update the changelog with issues links -->
+
 # 0.2.0
 [30/10/2022]
 

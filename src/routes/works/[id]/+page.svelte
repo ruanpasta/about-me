@@ -12,7 +12,7 @@
 </script>
 
 <Card {title}>
-	<p>{description}</p>
+	<p data-testid="works-card-description">{description}</p>
 	<div class="work__links">
 		{#each links as link}
 			<Button onClick={() => navigate(link.url)}>

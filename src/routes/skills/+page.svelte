@@ -11,7 +11,7 @@
 </script>
 
 <Card title={$t('common.menu.skills')}>
-	<p>
+	<p data-testid="skills-card-description">
 		{description}
 	</p>
 	<div class="skills">

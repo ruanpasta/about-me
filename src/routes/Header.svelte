@@ -49,7 +49,7 @@
 	<Navbar>
 		<Row>
 			<Section class="logo">
-				<a href="/">RP</a>
+				<a href="/" name="logo">RP</a>
 			</Section>
 			<Section>
 				<Menu {menus} />
