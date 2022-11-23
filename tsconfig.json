@@ -11,8 +11,8 @@
 		"strict": true,
 
 	},
-  "include": ["src/**/*.ts", "src/**/*.svelte", "src/routes/works/[id]/+page.ts"],
-  "exclude": ["node_modules/*", "**/*.test.ts"],
+  "include": ["src/**/*.ts", "src/**/*.svelte", "src/routes/works/[id]/+page.ts", "tests/**/*.ts"],
+  "exclude": ["node_modules/*"],
   "types": ["vitest/globals", "@testing-library/jest-dom"]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
