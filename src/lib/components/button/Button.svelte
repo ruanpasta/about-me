@@ -15,6 +15,7 @@
     [externalClass]: true,
     'about-me-button': true
   })}
+  {...$$restProps}
   on:click={onClick}
   on:keydown={() => {}}
 >
@@ -31,10 +32,8 @@
 <style lang="scss">
   :global {
     .about-me-button {
-      @apply mr-4;
 
       &__container__content {
-        @apply pb-2;
         @apply transition ease-in-out delay-150;
         @apply hover:scale-110 hover:font-bold;
         @apply duration-300;

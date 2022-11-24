@@ -12,6 +12,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
     alias: {
+      '$': './src',
       '$helpers': './src/helpers',
       '$styles': './static/styles',
       '$icons': './src/lib/components/common/icons',

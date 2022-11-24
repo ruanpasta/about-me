@@ -1,35 +1,35 @@
 type Theme = 'system' | 'light' | 'dark'
 
 interface Links {
-  label: string;
-  url: string;
-  component?: any;
+	label: string
+	url: string
+	component?: any
 }
 
 interface Work {
-  title: string;
-  description: string;
-  links: Links[]
+	title: string
+	description: string
+	links: Links[]
 }
 
 interface Technology {
-  label: string;
-  highlighted?: boolean;
+	label: string
+	highlighted?: boolean
 }
 
 interface Skills {
-  description: string;
-  technologies: Technology[];
+	description: string
+	technologies: Technology[]
 }
 
 interface Experience {
-  company: string;
-  opened: boolean;
-  roleDescription: string;
-  entree: string;
-  leave: string;
-  links: Links[]
-  technologies: Technology[]
+	company: string
+	opened: boolean
+	roleDescription: string
+	entree: string
+	leave: string
+	links: Links[]
+	technologies: Technology[]
 }
 
 export type { Theme }

@@ -31,10 +31,11 @@
 			onClick={() => toggle(item)}
 		>
 			{#if item?.links?.length}
-				<Row class="experience-content" justify="start">
+				<Row class="experience-content-buttons" justify="start">
 					{#each item.links as link}
 						<Button
 							class="experience-button"
+              data-title={link.label}
 							onClick={() => navigate(link.url)}
 							link
 						>
@@ -50,7 +51,7 @@
 			</Row>
 
 			{#if item.technologies?.length}
-				<Row class="experience-content" justify="start">
+				<Row class="experience-content-badges" justify="start">
 					{#each item?.technologies as tecnology}
 						<Badge label={tecnology.label} />
 					{/each}
@@ -62,10 +63,12 @@
 
 <style lang="scss">
 	:global {
-		.experience-content {
-			@apply mt-4;
+		.experience-content-buttons {
+			@apply mt-4 grid grid-flow-col auto-cols-max gap-4;
 		}
-
+		.experience-content-badges {
+			@apply mt-2 grid grid-flow-col auto-cols-max gap-2;
+		}
 		.experience-button {
 			svg {
 				@apply inline mr-2;

@@ -29,7 +29,9 @@
 	</svelte:element>
 
 	{#if opened}
-		<slot />
+    <div class="accordion__content">
+      <slot />
+    </div>
 	{/if}
 </div>
 
@@ -62,6 +64,10 @@
 				@apply text-base mr-2;
 			}
 		}
+
+    .accordion__content {
+      @apply ml-4
+    }
 
 		.accordion__links {
 			@apply mt-2;

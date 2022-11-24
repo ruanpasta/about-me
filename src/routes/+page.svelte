@@ -11,6 +11,6 @@
 
 <style lang="scss">
 	.presentation {
-		@apply w-full px-4 absolute top-1/3;
+		@apply w-full px-4 mt-[20%];
 	}
 </style>

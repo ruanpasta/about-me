@@ -4,9 +4,9 @@
 
 	export let data: PageData
 
-  $: title = data?.title || ''
-  $: description = data?.description || ''
-  $: links = data?.links || []
+	$: title = data?.title || ''
+	$: description = data?.description || ''
+	$: links = data?.links || []
 
 	const navigate = (url: string) => window.open(url, '_blank')
 </script>
@@ -24,6 +24,6 @@
 
 <style lang="scss">
 	.work__links {
-		@apply my-4;
+    @apply my-4 grid grid-flow-col auto-cols-max gap-4;
 	}
 </style>

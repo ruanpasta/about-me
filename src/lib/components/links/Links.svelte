@@ -1,27 +1,26 @@
 <script lang="ts">
+  import { ThemeOptions } from '$/common'
 	import { classMap } from '$helpers/classMap'
 	import GitHub from '$icons/github-icon.svelte'
 	import Linkedin from '$icons/linkedin-icon.svelte'
+	import { theme } from '$lib/stores/theme'
+  import { Button } from '$lib/components'
 
 	let externalClass = ''
 	export { externalClass as class }
+
+  $: color = $theme === ThemeOptions.Dark ?  '#787878' : '#383838'
+
+	const navigate = (url: string) => window.open(url, '_blank')
 </script>
 
 <div class={classMap({ [externalClass]: true, 'personal-links': true })}>
-	<a
-		href="https://github.com/ruanpasta"
-		target="_blank"
-		rel="noreferrer noopener"
-	>
-		<GitHub />
-	</a>
-	<a
-		href="https://www.linkedin.com/in/ruanpasta"
-		target="_blank"
-		rel="noreferrer noopener"
-	>
-		<Linkedin />
-	</a>
+  <Button onClick={() => navigate('https://github.com/ruanpasta')} link>
+		<GitHub {color} />
+  </Button>
+  <Button onClick={() => navigate('https://www.linkedin.com/in/ruanpasta')} link>
+		<Linkedin {color} />
+  </Button>
 </div>
 
 <style lang="scss">

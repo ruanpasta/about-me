@@ -10,6 +10,6 @@
 	}
 </script>
 
-<Button onClick={changeLangue} link>
+<Button title="language switch" onClick={changeLangue} link>
 	{current}
 </Button>

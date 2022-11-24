@@ -5,14 +5,15 @@
 	import WhiteBalanceSunny from 'svelte-material-icons/WhiteBalanceSunny.svelte'
 	import MoonWaningCrescent from 'svelte-material-icons/MoonWaningCrescent.svelte'
 	import type { Theme } from 'src/global'
-	import { Empty } from '$lib/components'
+	import { Button, Empty } from '$lib/components'
   import { classMap } from '$helpers/classMap'
+  import { ThemeOptions } from '$/common'
 
 	let isSystemDark = false
 
 	const getTheme = (theme: Theme) => {
-		if (theme !== 'system') return theme
-		if (theme === 'system' && isSystemDark) return 'dark'
+		if (theme !== ThemeOptions.System) return theme
+		if (theme === ThemeOptions.System && isSystemDark) return 'dark'
 		return 'light'
 	}
 
@@ -61,24 +62,15 @@
 			})
 </script>
 
-<button
-	class={classMap({
-    icon: true,
-    'dark-theme': $theme === 'dark',
-    'light-theme': $theme === 'light',
+<Button
+  class={classMap({
+    'dark-theme': $theme === ThemeOptions.Dark,
+    'light-theme': $theme === ThemeOptions.Light,
   })}
-	type="button"
 	title="theme switch"
 	data-testid="theme-switch"
-	on:click={handleOnClick}
-	on:keyup={() => {}}
+	onClick={handleOnClick}
+  link
 >
 	<svelte:component this={component} />
-</button>
-
-<style lang="scss">
-	.icon {
-		@apply w-6 h-6 p-1 rounded-full;
-		@apply text-background bg-default;
-	}
-</style>
+</Button>

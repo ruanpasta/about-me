@@ -21,7 +21,9 @@
   'gradient--right': position === 'right',
   'gradient--all': position === 'all',
   'gradient--rounded': position === 'all' && rounded
-})}>
+})}
+  {...$$restProps}
+>
   <div class={classMap({
     [bgClass]: true,
     overlaid: !filled && !bgClass,

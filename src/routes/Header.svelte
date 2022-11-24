@@ -1,5 +1,6 @@
 <script lang="ts">
 	import {
+		Button,
 		LanguageSwitch,
 		Navbar,
 		Row,
@@ -14,6 +15,7 @@
 	import BookOpenPageVariantOutline from 'svelte-material-icons/BookOpenPageVariantOutline.svelte'
 	import BriefcaseOutline from 'svelte-material-icons/BriefcaseOutline.svelte'
 	import InformationOutline from 'svelte-material-icons/InformationOutline.svelte'
+  import { onMount } from 'svelte'
 
 	let menus: MenuItem[] = [
 		{
@@ -49,12 +51,14 @@
 	<Navbar>
 		<Row>
 			<Section class="logo">
-				<a href="/" name="logo">RP</a>
+        <Button data-title="logo" name="logo" link>
+          <a href="/" name="logo">RP</a>
+				</Button>
 			</Section>
 			<Section>
 				<Menu {menus} />
 			</Section>
-			<Section>
+			<Section class="nav-buttons">
 				<LanguageSwitch />
 				<ThemeSwitch />
 			</Section>
@@ -63,7 +67,12 @@
 </header>
 
 <style lang="scss">
-	:global(.logo) {
-		@apply text-2xl font-black text-primary;
+	:global {
+		.logo {
+			@apply text-2xl font-black text-primary;
+		}
+		.nav-buttons {
+			@apply grid grid-flow-col gap-4;
+		}
 	}
 </style>

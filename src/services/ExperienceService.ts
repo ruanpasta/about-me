@@ -12,12 +12,12 @@ const mockedExperiences = [
     entree: '2022',
     leave: '',
     links: [
-      { label: 'Remote', url: '', component: MapMarker },
       {
         label: 'octadesk.com',
         url: 'https://octadesk.com',
         component: OpenInNew
-      }
+      },
+      { label: 'Remote', url: '', component: MapMarker }
     ],
     technologies: [
       { label: 'Vue' },
@@ -36,12 +36,12 @@ const mockedExperiences = [
     entree: '2021',
     leave: '2022',
     links: [
-      { label: 'Blumenau, SC', url: '', component: MapMarker },
       {
         label: 'ambev.com',
         url: 'https://ambev.com',
         component: OpenInNew
-      }
+      },
+      { label: 'Blumenau, SC', url: '', component: MapMarker }
     ],
     technologies: [
       { label: 'React' },
@@ -60,12 +60,12 @@ const mockedExperiences = [
     entree: '2018',
     leave: '2022',
     links: [
-      { label: 'Blumenau, SC, BR', url: '', component: MapMarker },
       {
         label: 'seniorsistemas.com',
         url: 'https://seniorsistemas.com',
         component: OpenInNew
-      }
+      },
+      { label: 'Blumenau, SC, BR', url: '', component: MapMarker }
     ],
     technologies: [
       { label: 'Angular' },

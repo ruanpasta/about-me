@@ -7,7 +7,7 @@
 <style lang="scss">
   .badge {
     @apply text-lg lowercase text-default;
-    @apply px-2 mr-2 mb-2 rounded-2xl;
+    @apply px-2 rounded-2xl;
     @apply bg-gray;
   }
 </style>

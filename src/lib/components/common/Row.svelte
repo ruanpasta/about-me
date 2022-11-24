@@ -4,7 +4,9 @@
   'ab-row--start': justify === 'start',
   'ab-row--between': justify === 'between',
   'ab-row--end': justify === 'end',
-})}>
+})}
+  {...$$restProps}
+>
   <slot />
 </div>
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { classMap } from '$helpers/classMap'
-  import { setContext } from 'svelte'
+  import { onMount, setContext } from 'svelte'
 	import Menu from 'svelte-material-icons/Menu.svelte'
   import type { MenuContext } from './MenuContext'
 	import MenuList from './MenuList.svelte'
@@ -8,6 +8,7 @@
 
 	let showMenu = false
 	export let menus: MenuItem[] = []
+  export let appendTo: HTMLElement | null = null
 
 	const closeExpandedMenu = (item: MenuItem): void => {
 		item.expanded = false
@@ -21,11 +22,20 @@
 	}
 
   setContext<MenuContext>('menu', { closeMenu })
+
+  onMount(() => {
+    if (appendTo) {
+      const thisMenu = document.getElementById('ab-menu')
+      if (thisMenu) {
+        appendTo.append(thisMenu)
+      }
+    }
+  })
 </script>
 
 <!-- TODO: Use Gradient component here -->
 
-<div class:gradient={showMenu}>
+<div id="ab-menu" class:gradient={showMenu}>
 	<div
 		class={classMap({
 			menu: true,
@@ -74,7 +84,7 @@
 	}
 
 	.gradient {
-		@apply fixed top-0 left-0 w-full z-10;
+		@apply absolute top-0 left-0 w-full z-10;
 		@apply pb-0.5 rounded-b-[30px];
 		@apply bg-gradient-to-r from-primary via-secondary to-tertiary;
 	}
