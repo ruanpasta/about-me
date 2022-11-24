@@ -5,7 +5,7 @@ test.describe('menu', () => {
 		await page.goto('/')
 
 		await page.getByRole('button', { name: 'menu' }).click()
-		const openElement = await page.innerText('.menu--open')
+		const openElement = await page.innerText('.ab-menu--open')
 		expect(openElement).toBeTruthy()
 	})
 
