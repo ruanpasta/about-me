@@ -8,6 +8,7 @@
 	import { Button, Empty } from '$lib/components'
   import { classMap } from '$helpers/classMap'
   import { ThemeOptions } from '$/common'
+	import { t } from '$lib/translations'
 
 	let isSystemDark = false
 
@@ -67,7 +68,7 @@
     'dark-theme': $theme === ThemeOptions.Dark,
     'light-theme': $theme === ThemeOptions.Light,
   })}
-	title="theme switch"
+	title={$t('common.hints.themeSwitch')}
 	data-testid="theme-switch"
 	onClick={handleOnClick}
   link

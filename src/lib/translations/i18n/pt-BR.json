@@ -5,5 +5,10 @@
     "skills": "Habilidades",
     "experience": "Experiência",
     "aboutMe": "Sobre mim"
+  },
+  "hints": {
+    "home": "Pagina principal",
+    "languageSwitch": "Troca de idioma",
+    "themeSwitch": "Troca de tema"
   }
 }

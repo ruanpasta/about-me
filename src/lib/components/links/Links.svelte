@@ -15,10 +15,10 @@
 </script>
 
 <div class={classMap({ [externalClass]: true, 'personal-links': true })}>
-  <Button onClick={() => navigate('https://github.com/ruanpasta')} link>
+  <Button title="Github" onClick={() => navigate('https://github.com/ruanpasta')} link>
 		<GitHub {color} />
   </Button>
-  <Button onClick={() => navigate('https://www.linkedin.com/in/ruanpasta')} link>
+  <Button title="Linkedin" onClick={() => navigate('https://www.linkedin.com/in/ruanpasta')} link>
 		<Linkedin {color} />
   </Button>
 </div>

@@ -17,7 +17,7 @@
 		on:click={onClick}
 		on:keydown={() => {}}
 	>
-		<Gradient class="accordion__header__gradient" show={true} filled>
+		<Gradient class="accordion__header__gradient" filled>
 			<Row class="accordion__header__content">
 				<h2>{title}</h2>
 				<Row class="accordion__header__content__subsection" justify="end">

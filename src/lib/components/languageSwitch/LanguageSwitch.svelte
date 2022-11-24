@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { loadTranslations, locale } from '$lib/translations'
 	import { Button } from '$lib/components'
+	import { t } from '$lib/translations'
 
 	let current = locale.get() || 'en-US'
 
@@ -10,6 +11,6 @@
 	}
 </script>
 
-<Button title="language switch" onClick={changeLangue} link>
+<Button title={$t('common.hints.languageSwitch')} onClick={changeLangue} link>
 	{current}
 </Button>

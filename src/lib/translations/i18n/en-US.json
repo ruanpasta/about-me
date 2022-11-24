@@ -5,5 +5,10 @@
     "skills": "Skills",
     "experience": "Experience",
     "aboutMe": "About me"
+  },
+  "hints": {
+    "home": "Home",
+    "languageSwitch": "Language switch",
+    "themeSwitch": "Theme switch"
   }
 }

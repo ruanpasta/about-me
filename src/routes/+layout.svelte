@@ -31,7 +31,7 @@
 		web: !isMobile
 	})}
 >
-	<div class:web__content={!isMobile}>
+	<div id="menu-to-append" class:web__content={!isMobile}>
 		<Gradient
       id="header-navbar-list"
 			class={classMap({ web__content__gradient: !isMobile })}

@@ -19,7 +19,6 @@
 	<div class="about-me-image">
 		<Gradient
 			class="about-me-image--rounded"
-			show={true}
 			position="all"
 			rounded
 		>

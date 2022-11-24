@@ -7,7 +7,7 @@
   export let role: string
 </script>
 
-<Gradient class={externalClass} show={true}>
+<Gradient class={externalClass}>
   <div class="presentation">
     <span class="name">{name}</span>
     <span class="role">{role}</span>

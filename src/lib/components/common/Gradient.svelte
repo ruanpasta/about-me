@@ -1,8 +1,7 @@
 <script lang="ts">
   import { classMap } from "$helpers/classMap"
 
-  // TODO: change {show} default value to true
-  export let show = false
+  export let show = true
   export let position: 'bottom' | 'top' | 'left' | 'right' | 'all' = 'bottom'
   export let filled = false
   export let rounded = false

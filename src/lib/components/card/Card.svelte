@@ -1,17 +1,17 @@
 <script lang="ts">
   import Gradient from "../common/Gradient.svelte"
+  import Section from "../common/Section.svelte"
 
   export let title: string;
 </script>
 
-<!-- TODO: Use Section component here -->
-<section class="card">
-  <Gradient class="card__header" show={true}>
+<Section class="card">
+  <Gradient class="card__header">
     <h1 class="card__header__title">{title}</h1>
   </Gradient>
 
   <slot />
-</section>
+</Section>
 
 <style lang="scss">
   :global {

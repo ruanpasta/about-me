@@ -16,6 +16,7 @@
 	import BriefcaseOutline from 'svelte-material-icons/BriefcaseOutline.svelte'
 	import InformationOutline from 'svelte-material-icons/InformationOutline.svelte'
   import { onMount } from 'svelte'
+	import { t } from '$lib/translations'
 
 	let menus: MenuItem[] = [
 		{
@@ -45,18 +46,26 @@
 		},
 		{ name: 'common.menu.aboutMe', icon: InformationOutline, path: '/about-me' }
 	]
+
+  let append: (element: HTMLElement | null) => void;
+  const appendToChild = () => {
+    const element = document.getElementById('menu-to-append')
+    append(element)
+  }
+  
+  onMount(() => appendToChild())
 </script>
 
 <header>
 	<Navbar>
 		<Row>
 			<Section class="logo">
-        <Button data-title="logo" name="logo" link>
+        <Button title={$t('common.hints.home')} name="logo" link>
           <a href="/" name="logo">RP</a>
 				</Button>
 			</Section>
 			<Section>
-				<Menu {menus} />
+				<Menu {menus} bind:appendTo={append} />
 			</Section>
 			<Section class="nav-buttons">
 				<LanguageSwitch />

@@ -13,7 +13,7 @@
 	},
   "include": ["src/**/*.ts", "src/**/*.svelte", "src/routes/works/[id]/+page.ts", "tests/**/*.ts"],
   "exclude": ["node_modules/*"],
-  "types": ["vitest/globals", "@testing-library/jest-dom"]
+  "types": ["vitest/globals", "@testing-library/jest-dom", "svelte"]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
 	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
