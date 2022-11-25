@@ -3,19 +3,14 @@
 	import { setContext } from 'svelte'
 	import Menu from 'svelte-material-icons/Menu.svelte'
 	import Button from '../button/Button.svelte'
-	import Gradient from '../common/Gradient.svelte'
 	import type { MenuContext } from './MenuContext'
-	import MenuList from './MenuList.svelte'
 	import type { MenuItem } from './Menus'
+	import { t } from '$lib/translations'
+	import MenuModal from './MenuModal.svelte'
 
 	let showMenu = false
 	export let menus: MenuItem[] = []
-	export const appendTo = (element: HTMLElement | null): void => {
-		if (element) {
-			const menuDropdown = document.getElementById('ab-menu')
-			if (menuDropdown) element.appendChild(menuDropdown)
-		}
-	}
+	export let isMobile = false
 
 	const closeExpandedMenu = (item: MenuItem): void => {
 		item.expanded = false
@@ -29,44 +24,47 @@
 	}
 
 	setContext<MenuContext>('menu', { closeMenu })
+
+	const show = (menu: MenuItem) => {
+		if (menu.items) showMenu = !showMenu
+	}
 </script>
 
 <div>
-	<Button
-		type="button"
-		title="Menu"
-		class="ab-menu"
-		onClick={() => (showMenu = !showMenu)}
-		link
-	>
-		<Menu size={30} />
-	</Button>
-	<div id="ab-menu" class={showMenu ? 'ab-menu__dropdown' : ''}>
-		<Gradient class="rounded-b-[28px]" show={showMenu} filled>
-			<div
-				class={classMap({
-					'ab-menu': true,
-					'ab-menu__list': showMenu,
-					'ab-menu--open': showMenu
-				})}
-				on:mouseleave={() => closeMenu()}
-			>
-				<ul class="ab-menu__list__items">
-					{#if showMenu}
-						{#each menus as menu}
-							<MenuList {menu} />
-						{/each}
-					{/if}
-				</ul>
-			</div>
-		</Gradient>
-	</div>
+	{#if isMobile}
+		<Button
+			type="button"
+			title="Menu"
+			class="ab-menu"
+			onClick={() => (showMenu = !showMenu)}
+			link
+		>
+			<Menu size={30} />
+		</Button>
+    <MenuModal {menus} {showMenu} {isMobile} />
+	{:else}
+		<div class="menu-items relative">
+			{#each menus as menu}
+        <MenuModal {menu} {showMenu} />
+				<a
+					data-sveltekit-prefetch
+					href={menu.path}
+					class={classMap({
+						'menu-items__label': true
+					})}
+					on:click={() => show(menu)}
+				>
+					{$t(menu.name)}
+				</a>
+			{/each}
+		</div>
+	{/if}
 </div>
 
 <style lang="scss">
 	:global {
 		.ab-menu {
-			@apply text-secondary;
+			@apply text-secondary/70;
 			@apply rounded-b-[30px];
 
 			&__list {
@@ -78,13 +76,24 @@
 				@apply p-4 text-default;
 			}
 
-      &__dropdown {
-        @apply absolute top-0 left-0 w-full z-10;
-      }
+			&__dropdown {
+				@apply fixed top-0 left-0 w-full z-10;
+			}
 
 			.ab-menu__list__items {
 				@apply flex flex-col gap-4;
 			}
+		}
+	}
+
+	.menu-items {
+		@apply flex gap-2;
+		@apply font-bold text-transparent bg-clip-text;
+		@apply bg-primary;
+
+		&__label {
+			@apply text-2xl;
+			@apply hover:text-highlighted/50;
 		}
 	}
 </style>

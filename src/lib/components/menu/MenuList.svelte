@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { prefetch } from '$app/navigation'
 	import { classMap } from '$helpers/classMap'
 	import { getContext } from 'svelte'
 	import { Gradient } from '../common'
@@ -33,9 +32,9 @@
 <li
 	class={classMap({
 		[className]: true,
-		menu: true,
-		menu__submenu: level > 0,
-		'menu--expanded': menu.expanded && menu.items?.length
+		'ab-menu-list': true,
+		'ab-menu-list__submenu': level > 0,
+		'ab-menu-list--expanded': menu.expanded && menu.items?.length
 	})}
 	on:click={itemClicked}
 	on:keydown={() => {}}
@@ -57,8 +56,8 @@
 				data-sveltekit-prefetch
 				href={menu.path}
 				class={classMap({
-					menu__label: true,
-					'menu__label--hover': showHover
+					'ab-menu-list__label': true,
+					'ab-menu-list__label--hover': showHover
 				})}
 			>
 				{$t(menu.name)}
@@ -74,9 +73,9 @@
 {/if}
 
 <style lang="scss">
-	.menu {
-		@apply flex items-center gap-2 text-2xl cursor-pointer;
-		@apply text-default;
+	.ab-menu-list {
+		@apply flex items-center cursor-pointer;
+		@apply text-default font-normal;
 
 		&__submenu {
 			@apply pl-8 ml-2.5;
@@ -89,7 +88,7 @@
 		}
 	}
 
-	.menu__label {
+	.ab-menu-list__label {
 		@apply block;
 
 		&--hover {

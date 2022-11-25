@@ -15,11 +15,22 @@
 	import BookOpenPageVariantOutline from 'svelte-material-icons/BookOpenPageVariantOutline.svelte'
 	import BriefcaseOutline from 'svelte-material-icons/BriefcaseOutline.svelte'
 	import InformationOutline from 'svelte-material-icons/InformationOutline.svelte'
-  import { onMount } from 'svelte'
 	import { t } from '$lib/translations'
+
+	let innerWidth = 999
 
 	let menus: MenuItem[] = [
 		{
+			name: 'common.menu.skills',
+			icon: BookOpenPageVariantOutline,
+			path: '/skills'
+		},
+		{
+			name: 'common.menu.experience',
+			icon: BriefcaseOutline,
+			path: '/experience'
+		},
+    {
 			name: 'common.menu.work',
 			icon: PackageVariantClosed,
 			path: '',
@@ -34,27 +45,13 @@
 				}
 			]
 		},
-		{
-			name: 'common.menu.skills',
-			icon: BookOpenPageVariantOutline,
-			path: '/skills'
-		},
-		{
-			name: 'common.menu.experience',
-			icon: BriefcaseOutline,
-			path: '/experience'
-		},
 		{ name: 'common.menu.aboutMe', icon: InformationOutline, path: '/about-me' }
 	]
 
-  let append: (element: HTMLElement | null) => void;
-  const appendToChild = () => {
-    const element = document.getElementById('menu-to-append')
-    append(element)
-  }
-  
-  onMount(() => appendToChild())
+  $: isMobile = innerWidth < 660
 </script>
+
+<svelte:window bind:innerWidth />
 
 <header>
 	<Navbar>
@@ -65,7 +62,7 @@
 				</Button>
 			</Section>
 			<Section>
-				<Menu {menus} bind:appendTo={append} />
+				<Menu {menus} {isMobile} />
 			</Section>
 			<Section class="nav-buttons">
 				<LanguageSwitch />
