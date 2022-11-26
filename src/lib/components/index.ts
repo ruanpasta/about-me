@@ -8,7 +8,8 @@ import Card from './card/Card.svelte'
 import Button from './button/Button.svelte'
 import Accordion from './accordion/Accordion.svelte'
 import Badge from './badge/Badge.svelte'
-import LanguageSwitch from './languageSwitch/LanguageSwitch.svelte'
+import LanguageSwitch from './language-switch/LanguageSwitch.svelte'
+import PageSwitch from './page-switch/PageSwitch.svelte'
 
 export {
 	Navbar,
@@ -24,5 +25,6 @@ export {
   Button,
   Accordion,
   Badge,
-  LanguageSwitch
+  LanguageSwitch,
+  PageSwitch
 }

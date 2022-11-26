@@ -4,6 +4,7 @@
   'ab-row--start': justify === 'start',
   'ab-row--between': justify === 'between',
   'ab-row--end': justify === 'end',
+  'ab-row--center': justify === 'center',
 })}
   {...$$restProps}
 >
@@ -15,7 +16,7 @@
 
   let className = ''
   export { className as class }
-  export let justify: 'start' | 'between' | 'end' = 'between'
+  export let justify: 'start' | 'between' | 'end' | 'center' = 'between'
 </script>
 
 <style lang="scss">
@@ -30,6 +31,10 @@
     }
     &--end {
       @apply justify-end;
+    }
+
+    &--center {
+      @apply justify-center;
     }
   }
 </style>

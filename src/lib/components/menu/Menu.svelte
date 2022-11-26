@@ -92,7 +92,7 @@
 		@apply bg-primary;
 
 		&__label {
-			@apply text-2xl;
+			@apply text-xl;
 			@apply hover:text-highlighted/50;
 		}
 	}

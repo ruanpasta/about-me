@@ -2,7 +2,7 @@
 	import '../app.scss'
 	import Header from './Header.svelte'
 	import { theme } from '$lib/stores/theme'
-	import { Links } from '$lib/components'
+	import { Links, PageSwitch } from '$lib/components'
 	import { ThemeOptions } from '$/common'
 	import Gradient from '$/lib/components/common/Gradient.svelte'
 	import { classMap } from '$/helpers/classMap'
@@ -43,6 +43,7 @@
 
 				<main>
 					<slot />
+          <PageSwitch />
 				</main>
 
 				<footer class="app__footer">

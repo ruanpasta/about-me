@@ -73,49 +73,49 @@
 </div>
 
 <style lang="scss">
+	.ab-menu-modal {
+		@apply text-secondary/50 text-2xl;
+		@apply w-max;
+		@apply rounded-b-[30px] rounded-tl-none rounded-tr-[30px];
+
+		&--mobile {
+			@apply rounded-b-[30px] rounded-t-none w-full;
+		}
+
+		&__list {
+			@apply flex flex-col gap-4;
+			@apply bg-background-intermediate;
+		}
+
+		&--open {
+			@apply p-3 text-default;
+		}
+
+		&__dropdown {
+			@apply absolute top-0 left-0 w-full z-10;
+		}
+
+		&__dropdown--mobile {
+			@apply fixed top-0 left-0 w-full z-10;
+		}
+
+		.ab-menu-modal__list__items {
+			@apply flex flex-col gap-2 text-lg;
+		}
+
+		.ab-menu-modal__list__items--mobile {
+			@apply flex flex-col gap-4 text-xl;
+		}
+	}
+
 	:global {
-		.ab-menu-modal {
-			@apply text-secondary/50 text-2xl;
-			@apply w-max;
+		.ab-menu-modal__gradient {
+			@apply rounded-[30px] w-max relative top-10 left-2;
 			@apply rounded-b-[30px] rounded-tl-none rounded-tr-[30px];
+		}
 
-			&--mobile {
-				@apply rounded-b-[30px] rounded-t-none w-full;
-			}
-
-			&__gradient {
-				@apply rounded-[30px] w-max relative top-10 left-2;
-				@apply rounded-b-[30px] rounded-tl-none rounded-tr-[30px];
-			}
-
-			&__gradient--mobile {
-				@apply rounded-b-[30px] rounded-t-none w-full relative top-0 left-0;
-			}
-
-			&__list {
-				@apply flex flex-col gap-4;
-				@apply bg-background-intermediate;
-			}
-
-			&--open {
-				@apply p-3 text-default;
-			}
-
-			&__dropdown {
-				@apply absolute top-0 left-0 w-full z-10;
-			}
-
-			&__dropdown--mobile {
-				@apply fixed top-0 left-0 w-full z-10;
-			}
-
-			.ab-menu-modal__list__items {
-				@apply flex flex-col gap-2 text-lg;
-			}
-
-			.ab-menu-modal__list__items--mobile {
-				@apply flex flex-col gap-4 text-xl;
-			}
+		.ab-menu-modal__gradient--mobile {
+			@apply rounded-b-[30px] rounded-t-none w-full relative top-0 left-0;
 		}
 	}
 </style>
