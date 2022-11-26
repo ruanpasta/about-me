@@ -14,6 +14,10 @@
 	let previousPath = ''
 	let nextPath = ''
 
+  $: if ($navigating) updatePaths($navigating.to)
+
+	onMount(() => updatePaths($page.url.pathname))
+
 	const updatePaths = (route: NavigationTarget | string | null) => {
 		const isString = typeof route === 'string'
 		const currentPathIndex = getPathIndex(
@@ -30,10 +34,6 @@
 			nextPath = routePaths[0]
 		}
 	}
-
-	$: if ($navigating) updatePaths($navigating.to)
-
-	onMount(() => updatePaths($page.url.pathname))
 </script>
 
 <Row class="ab-page-switch" justify="center">
