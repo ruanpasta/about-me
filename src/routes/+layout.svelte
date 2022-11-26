@@ -8,6 +8,8 @@
 	import { classMap } from '$/helpers/classMap'
   import { onMount } from 'svelte'
 
+  const routePaths = ['/skills', '/experience', '/works', '/about-me']
+
 	let innerWidth = 999
 
 	$: isMobile = innerWidth < 660
@@ -43,7 +45,7 @@
 
 				<main>
 					<slot />
-          <PageSwitch />
+          <PageSwitch {routePaths} />
 				</main>
 
 				<footer class="app__footer">

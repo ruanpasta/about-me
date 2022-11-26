@@ -6,12 +6,10 @@
 	import type { NavigationTarget } from '@sveltejs/kit'
 	import { onMount } from 'svelte'
 
-	const routePaths = ['skills', 'experience', 'work', 'about-me']
+	export let routePaths: string[] = []
 
-	const getPathIndex = (currentPath: string): number | null => {
-		const index = routePaths.findIndex((route) => currentPath.includes(route))
-		return index === -1 ? null : index
-	}
+	const getPathIndex = (currentPath: string): number =>
+		routePaths.findIndex((route) => currentPath.includes(route))
 
 	let previousPath = ''
 	let nextPath = ''
@@ -22,18 +20,14 @@
 			(isString ? route : route?.routeId) || ''
 		)
 
-		const isHome = !currentPathIndex
+		previousPath = routePaths[currentPathIndex - 1] ?? '/'
+		nextPath = routePaths[currentPathIndex + 1] ?? '/'
+
+		const isHome = currentPathIndex === -1
 
 		if (isHome) {
 			previousPath = routePaths[routePaths.length - 1]
 			nextPath = routePaths[0]
-		} else {
-			previousPath =
-				currentPathIndex === 0 ? '/' : routePaths[currentPathIndex - 1]
-			nextPath =
-				currentPathIndex === routePaths.length - 1
-					? '/'
-					: routePaths[currentPathIndex + 1]
 		}
 	}
 
@@ -43,7 +37,6 @@
 </script>
 
 <Row class="ab-page-switch" justify="center">
-	{previousPath} - {nextPath}
 	<div class="ab-page-switch__left">
 		<a data-sveltekit-prefetch href={previousPath}>
 			<ChevronLeft size={24} />
