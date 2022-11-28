@@ -5,7 +5,10 @@
 	import { page, navigating } from '$app/stores'
 	import type { NavigationTarget } from '@sveltejs/kit'
 	import { onMount } from 'svelte'
+	import { classMap } from '$/helpers/classMap'
 
+	let externalClass = ''
+	export { externalClass as class }
 	export let routePaths: string[] = []
 
 	const getPathIndex = (currentPath: string): number =>
@@ -14,7 +17,7 @@
 	let previousPath = ''
 	let nextPath = ''
 
-  $: if ($navigating) updatePaths($navigating.to)
+	$: if ($navigating) updatePaths($navigating.to)
 
 	onMount(() => updatePaths($page.url.pathname))
 
@@ -36,35 +39,40 @@
 	}
 </script>
 
-<Row class="ab-page-switch" justify="center">
-	<div class="ab-page-switch__left">
-		<a data-sveltekit-prefetch href={previousPath}>
-			<ChevronLeft size={24} />
-		</a>
-	</div>
-	<div class="ab-page-switch__right">
-		<a data-sveltekit-prefetch href={nextPath}>
-			<ChevronRight size={24} />
-		</a>
-	</div>
-</Row>
+<div
+	class={classMap({
+		[externalClass]: true,
+		'ab-page-switch': true
+	})}
+>
+	<Row justify="center">
+		<div class="ab-page-switch__left">
+			<a data-sveltekit-prefetch href={previousPath}>
+				<ChevronLeft size={24} />
+			</a>
+		</div>
+		<div class="ab-page-switch__right">
+			<a data-sveltekit-prefetch href={nextPath}>
+				<ChevronRight size={24} />
+			</a>
+		</div>
+	</Row>
+</div>
 
 <style lang="scss">
-	:global {
-		.ab-page-switch {
-			@apply mt-8;
+	.ab-page-switch {
+		@apply w-max;
 
-			&__left {
-				@apply cursor-pointer;
-				@apply rounded-l-2xl bg-primary/70;
-				@apply hover:bg-primary/90;
-			}
+		&__left {
+			@apply cursor-pointer;
+			@apply rounded-l-2xl bg-green-900/70 dark:bg-orange/70;
+			@apply hover:bg-green-900/90 dark:bg-orange/90;
+		}
 
-			&__right {
-				@apply cursor-pointer;
-				@apply rounded-r-2xl bg-tertiary/70;
-				@apply hover:bg-tertiary/100;
-			}
+		&__right {
+			@apply cursor-pointer;
+			@apply rounded-r-2xl bg-green-100/70 dark:bg-blue/70;
+			@apply hover:bg-green-100/100 dark:bg-blue/100;
 		}
 	}
 </style>

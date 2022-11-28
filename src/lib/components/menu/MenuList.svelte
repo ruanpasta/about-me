@@ -75,16 +75,16 @@
 <style lang="scss">
 	.ab-menu-list {
 		@apply flex items-center cursor-pointer;
-		@apply text-default font-normal;
+		@apply text-black-700 dark:text-white-400 font-normal;
 
 		&__submenu {
 			@apply pl-8 ml-2.5;
 			@apply border-l-2;
-			@apply border-disabled;
+			@apply border-black-800 dark:border-gray-100;
 		}
 
 		&--expanded {
-			@apply text-default;
+			@apply text-black-700 dark:text-white-400;
 		}
 	}
 
@@ -92,7 +92,7 @@
 		@apply block;
 
 		&--hover {
-			@apply text-highlighted font-black;
+			@apply text-black-900 dark:text-white-100 font-black;
 		}
 	}
 </style>

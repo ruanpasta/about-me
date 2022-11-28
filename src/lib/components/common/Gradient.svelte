@@ -36,8 +36,8 @@
 <style lang="scss">
   .gradient {
     @apply transition ease-in-out delay-150;
-    @apply bg-gradient-to-r from-primary via-secondary/50 to-tertiary/25;
-    @apply hover:bg-primary duration-500;
+    @apply bg-gradient-to-r from-green-900 dark:from-orange via-green-500/50 dark:via-red/50 to-green-100/25 dark:to-blue/25;
+    @apply hover:bg-green-900 dark:hover:bg-orange duration-500;
 
     &--bottom {
       @apply pb-0.5;
@@ -65,6 +65,6 @@
   }
 
   .overlaid {
-    @apply bg-background;
+    @apply bg-white-400 dark:bg-black-700;
   }
 </style>

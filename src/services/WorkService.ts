@@ -1,4 +1,3 @@
-import { time } from "$helpers/fakeRest"
 import type { Work } from "src/global"
 
 const mockedWork = {
@@ -14,8 +13,6 @@ const mockedWork = {
 }
 
 const getWork = async (name: string): Promise<Work> => {
-  console.log(name)
-  await time(1000) 
 	return  mockedWork 
 } 
 

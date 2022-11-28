@@ -45,7 +45,7 @@
 			@apply cursor-pointer w-full;
       
       h2 {
-        @apply text-white;
+        @apply text-white-400;
       }
 
 			&__gradient {

@@ -31,7 +31,7 @@
 <style lang="scss">
 	.skills {
 		@apply flex justify-center pt-8;
-		@apply text-disabled;
+		@apply text-black-800 dark:text-gray-100;
 
 		&__technologies {
 			@apply flex flex-wrap justify-center max-w-xs;
@@ -42,7 +42,7 @@
 		}
 
 		&__technologies__item--highlighted {
-			@apply font-bold text-highlighted uppercase;
+			@apply font-bold text-black-900 dark:text-white-100 uppercase;
 		}
 	}
 </style>

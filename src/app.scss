@@ -8,7 +8,7 @@
 }
 
 body {
-  @apply h-full w-full text-default bg-background font-base;
+  @apply h-full w-full text-black-700 dark:text-white-400 bg-white-400 dark:bg-black-700 font-base;
 }
 
 ::-webkit-scrollbar {
@@ -18,7 +18,7 @@ body {
 ::-webkit-scrollbar-thumb {
   @apply border-2 border-solid border-transparent border-y-4;
   @apply bg-clip-padding;
-  @apply bg-gradient-to-b from-primary/50 via-secondary/25 to-tertiary/25;
+  @apply bg-gradient-to-b from-green-900/50 dark:from-orange/50 via-green-500/25 dark:via-red/25 to-green-100/25 dark:to-blue/25;
 }
 
 ::-webkit-scrollbar-track {

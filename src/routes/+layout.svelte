@@ -2,7 +2,7 @@
 	import '../app.scss'
 	import Header from './Header.svelte'
 	import { theme } from '$lib/stores/theme'
-	import { Links, PageSwitch } from '$lib/components'
+	import { Links, PageSwitch, Row } from '$lib/components'
 	import { ThemeOptions } from '$/common'
 	import Gradient from '$/lib/components/common/Gradient.svelte'
 	import { classMap } from '$/helpers/classMap'
@@ -13,6 +13,8 @@
 	let innerWidth = 999
 
 	$: isMobile = innerWidth < 660
+
+  $: dark = $theme === ThemeOptions.Dark
 
   onMount(() => innerWidth = window.innerWidth)
 </script>
@@ -30,9 +32,11 @@
 <div
 	class={classMap({
 		app: true,
-		web: !isMobile
+		web: !isMobile,
+    dark
 	})}
 >
+  {dark}
 	<div class:web__content={!isMobile}>
 		<Gradient
       id="header-navbar-list"
@@ -45,11 +49,13 @@
 
 				<main>
 					<slot />
-          <PageSwitch {routePaths} />
 				</main>
 
 				<footer class="app__footer">
-					<Links class="links" />
+          <Row>
+            <Links class="app__footer__item" />
+            <PageSwitch class="app__footer__item" {routePaths} />
+          </Row>
 				</footer>
 			</div>
 		</Gradient>
@@ -63,7 +69,7 @@
 	.web {
 		@apply flex justify-center justify-items-center items-center;
 		@apply sm:min-h-screen;
-    @apply bg-background-intermediate
+    @apply bg-white-500 dark:bg-black-600;
 	}
 	.web__content {
 		@apply w-full min-h-[800px] relative;
@@ -76,9 +82,10 @@
 		@apply min-h-[800px];
 	}
 	.app__footer {
-		@apply absolute bottom-0 mb-2 ml-2;
+		@apply absolute bottom-0 w-[99%];
 	}
-	:global(.links) {
-		@apply left-2 p-2 rounded-2xl bg-background;
-	}
+
+  :global(.app__footer__item) {
+    @apply m-2;
+  }
 </style>

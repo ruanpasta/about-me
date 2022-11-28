@@ -72,7 +72,7 @@
 		.experience-button {
 			svg {
 				@apply inline mr-2;
-				@apply text-primary;
+				@apply text-green-900 dark:text-orange;
 			}
 		}
 	}

@@ -74,7 +74,7 @@
 
 <style lang="scss">
 	.ab-menu-modal {
-		@apply text-secondary/50 text-2xl;
+		@apply text-green-500/50 dark:text-red/50 text-2xl;
 		@apply w-max;
 		@apply rounded-b-[30px] rounded-tl-none rounded-tr-[30px];
 
@@ -84,11 +84,11 @@
 
 		&__list {
 			@apply flex flex-col gap-4;
-			@apply bg-background-intermediate;
+			@apply bg-white-500 dark:bg-black-600;
 		}
 
 		&--open {
-			@apply p-3 text-default;
+			@apply p-3 text-black-700 dark:text-white-400;
 		}
 
 		&__dropdown {

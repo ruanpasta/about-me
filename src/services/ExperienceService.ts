@@ -1,4 +1,3 @@
-import { time } from "$helpers/fakeRest"
 import type { Experience } from "src/global"
 import MapMarker from 'svelte-material-icons/MapMarker.svelte'
 import OpenInNew from 'svelte-material-icons/OpenInNew.svelte'
@@ -80,7 +79,6 @@ const mockedExperiences = [
 
 
 const getExperiences = async (): Promise<Experience[]> => {
-  await time(1000)
 	return  mockedExperiences 
 }
 

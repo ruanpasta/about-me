@@ -64,16 +64,16 @@
 <style lang="scss">
 	:global {
 		.ab-menu {
-			@apply text-secondary/70;
+			@apply text-black-800/70 dark:text-gray-100;
 			@apply rounded-b-[30px];
 
 			&__list {
 				@apply flex flex-col gap-4;
-				@apply bg-background-intermediate;
+				@apply bg-white-500 dark:bg-black-600;
 			}
 
 			&--open {
-				@apply p-4 text-default;
+				@apply p-4 text-black-700 dark:text-white-400;
 			}
 
 			&__dropdown {
@@ -89,11 +89,11 @@
 	.menu-items {
 		@apply flex gap-2;
 		@apply font-bold text-transparent bg-clip-text;
-		@apply bg-primary;
+		@apply bg-green-900 dark:bg-orange;
 
 		&__label {
 			@apply text-xl;
-			@apply hover:text-highlighted/50;
+			@apply hover:text-black-900/50 dark:hover:text-white-100/50;
 		}
 	}
 </style>

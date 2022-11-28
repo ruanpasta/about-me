@@ -27,7 +27,7 @@
 		@apply flex flex-col items-center;
 	}
 	.projects-list__item {
-		@apply text-default;
-		@apply hover:text-highlighted hover:font-black;
+		@apply text-black-700 dark:text-white-400;
+		@apply hover:text-black-900 dark:hover:bg-white-100 hover:font-black;
 	}
 </style>

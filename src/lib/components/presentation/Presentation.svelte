@@ -23,7 +23,7 @@
 
   .name {
     @apply uppercase;
-    @apply bg-gradient-to-r from-primary via-secondary to-tertiary;
+    @apply bg-gradient-to-r from-green-900 dark:from-orange via-green-500 dark:via-red to-green-100 dark:to-blue;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -75,7 +75,7 @@
 <style lang="scss">
 	:global {
 		.logo {
-			@apply text-2xl font-black text-primary;
+			@apply text-2xl font-black text-green-900 dark:text-orange;
 		}
 		.nav-buttons {
 			@apply grid grid-flow-col gap-4;

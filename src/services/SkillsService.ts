@@ -1,4 +1,3 @@
-import { time } from "$helpers/fakeRest"
 import type { Skills } from "src/global"
 
 const mockedDescription = `Ola, sou um amante do ecosistema JS/TS e tudo que os envolve, mas estou em
@@ -23,7 +22,6 @@ const mockedTechnologies = [
 ]
 
 const getSkills = async (): Promise<Skills> => {
-  await time(1000) 
 	return  {
     description: mockedDescription,
     technologies: mockedTechnologies
