@@ -7,7 +7,7 @@
     export { externalClass as class }
 </script>
 
-<style lang="scss">
+<style lang="scss" global>
   section {
     @apply justify-start;
   }

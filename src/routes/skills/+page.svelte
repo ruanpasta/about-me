@@ -28,7 +28,7 @@
 	</div>
 </Card>
 
-<style lang="scss">
+<style lang="scss" global>
 	.skills {
 		@apply flex justify-center pt-8;
 		@apply text-black-800 dark:text-gray-100;

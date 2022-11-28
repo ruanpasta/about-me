@@ -59,7 +59,7 @@
 	</Row>
 </div>
 
-<style lang="scss">
+<style lang="scss" global>
 	.ab-page-switch {
 		@apply w-max;
 

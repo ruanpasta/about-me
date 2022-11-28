@@ -15,7 +15,7 @@
 </Gradient>
 
 
-<style lang="scss">
+<style lang="scss" global>
   .presentation {
     @apply flex flex-col p-2;
     @apply font-semibold;

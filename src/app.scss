@@ -7,8 +7,9 @@
   src: url('/fonts/Quicksand-VariableFont_wght.ttf');
 }
 
-body {
-  @apply h-full w-full text-black-700 dark:text-white-400 bg-white-400 dark:bg-black-700 font-base;
+body, html {
+  @apply h-full w-full text-black-700 bg-white-400 font-base;
+  @apply dark:text-white-400 dark:bg-black-700
 }
 
 ::-webkit-scrollbar {

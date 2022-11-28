@@ -1,7 +1,19 @@
 import { writable } from 'svelte/store'
-import type { Theme } from '../../global'
+import { browser } from '$app/environment'
+import { ThemeOptions } from '$/common'
+import type { Theme } from '$/global'
 
-// TODO: Verificar no localStorage se tem algum tema preferido antes de carregar o estilo do systema
-const theme = writable<Theme>('system')
+const getTheme = () => {
+	if (browser) {
+		return (localStorage.getItem('theme') as Theme) ?? ThemeOptions.System
+	}
+	return ThemeOptions.System
+}
+
+const theme = writable<Theme>(getTheme())
+
+theme.subscribe((theme: Theme) => {
+	if (browser) return (localStorage.theme = theme)
+})
 
 export { theme }

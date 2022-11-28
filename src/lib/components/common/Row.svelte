@@ -19,7 +19,7 @@
   export let justify: 'start' | 'between' | 'end' | 'center' = 'between'
 </script>
 
-<style lang="scss">
+<style lang="scss" global>
   .ab-row {
     @apply flex flex-wrap flex-row justify-between relative box-border w-full items-center;
 

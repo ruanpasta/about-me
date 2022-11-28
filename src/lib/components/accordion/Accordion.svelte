@@ -12,7 +12,7 @@
 <div class="accordion">
 	<svelte:element
 		this="button"
-    type="button"
+		type="button"
 		class="accordion__header"
 		on:click={onClick}
 		on:keydown={() => {}}
@@ -29,48 +29,46 @@
 	</svelte:element>
 
 	{#if opened}
-    <div class="accordion__content">
-      <slot />
-    </div>
+		<div class="accordion__content">
+			<slot />
+		</div>
 	{/if}
 </div>
 
-<style lang="scss">
+<style lang="scss" global>
 	.accordion {
 		@apply my-4;
 	}
 
-	:global {
-		.accordion__header {
-			@apply cursor-pointer w-full;
-      
-      h2 {
-        @apply text-white-400;
-      }
+	.accordion__header {
+		@apply cursor-pointer w-full;
 
-			&__gradient {
-				@apply rounded-lg;
-			}
-
-			&__content {
-				@apply p-4 font-semibold;
-			}
-
-			&__content__subsection {
-				@apply max-w-[40%];
-			}
-
-			&__content__subsection h3 {
-				@apply text-base mr-2;
-			}
+		h2 {
+			@apply text-white-400;
 		}
 
-    .accordion__content {
-      @apply ml-4
-    }
-
-		.accordion__links {
-			@apply mt-2;
+		&__gradient {
+			@apply rounded-lg;
 		}
+
+		&__content {
+			@apply p-4 font-semibold;
+		}
+
+		&__content__subsection {
+			@apply max-w-[40%];
+		}
+
+		&__content__subsection h3 {
+			@apply text-base mr-2;
+		}
+	}
+
+	.accordion__content {
+		@apply ml-4;
+	}
+
+	.accordion__links {
+		@apply mt-2;
 	}
 </style>

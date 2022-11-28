@@ -30,7 +30,7 @@
 			icon: BriefcaseOutline,
 			path: '/experience'
 		},
-    {
+		{
 			name: 'common.menu.work',
 			icon: PackageVariantClosed,
 			path: '',
@@ -48,7 +48,7 @@
 		{ name: 'common.menu.aboutMe', icon: InformationOutline, path: '/about-me' }
 	]
 
-  $: isMobile = innerWidth < 660
+	$: isMobile = innerWidth < 660
 </script>
 
 <svelte:window bind:innerWidth />
@@ -57,8 +57,8 @@
 	<Navbar>
 		<Row>
 			<Section class="logo">
-        <Button title={$t('common.hints.home')} name="logo" link>
-          <a href="/" name="logo">RP</a>
+				<Button title={$t('common.hints.home')} name="logo" link>
+					<a href="/" name="logo">RP</a>
 				</Button>
 			</Section>
 			<Section>
@@ -72,13 +72,11 @@
 	</Navbar>
 </header>
 
-<style lang="scss">
-	:global {
-		.logo {
-			@apply text-2xl font-black text-green-900 dark:text-orange;
-		}
-		.nav-buttons {
-			@apply grid grid-flow-col gap-4;
-		}
+<style lang="scss" global>
+	.logo {
+		@apply text-2xl font-black text-green-900 dark:text-orange;
+	}
+	.nav-buttons {
+		@apply grid grid-flow-col gap-4;
 	}
 </style>

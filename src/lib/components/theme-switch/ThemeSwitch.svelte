@@ -6,72 +6,73 @@
 	import MoonWaningCrescent from 'svelte-material-icons/MoonWaningCrescent.svelte'
 	import type { Theme } from 'src/global'
 	import { Button, Empty } from '$lib/components'
-  import { classMap } from '$helpers/classMap'
-  import { ThemeOptions } from '$/common'
+	import { classMap } from '$helpers/classMap'
+	import { ThemeOptions } from '$/common'
 	import { t } from '$lib/translations'
 
-	let isSystemDark = false
+	$: if ($theme) changeTheme()
 
-	const getTheme = (theme: Theme) => {
-		if (theme !== ThemeOptions.System) return theme
-		if (theme === ThemeOptions.System && isSystemDark) return 'dark'
-		return 'light'
+	const changeTheme = () => {
+		try {
+			if (
+				$theme === ThemeOptions.Dark ||
+				(($theme === ThemeOptions.System || !$theme) &&
+					window.matchMedia('(prefers-color-scheme: dark)').matches)
+			)
+				document.documentElement.classList.add('dark')
+			else document.documentElement.classList.remove('dark')
+		} catch {}
 	}
 
-	const Icon = (theme: Theme) =>
-		getTheme(theme) === 'light' ? WhiteBalanceSunny : MoonWaningCrescent
+	const getTheme = (theme: Theme): 'light' | 'dark' => {
+		try {
+			if (theme === ThemeOptions.System || !theme) {
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+					return ThemeOptions.Dark
+				return ThemeOptions.Light
+			}
+			return theme
+		} catch {
+			return ThemeOptions.Light
+		}
+	}
+
+	const Icon = (theme: Theme) => {
+		console.log('Icon getTheme', getTheme(theme))
+		return getTheme(theme) === 'light' ? WhiteBalanceSunny : MoonWaningCrescent
+	}
 
 	let component = Empty
 
 	onMount(() => {
-		const storageTheme = window.localStorage.getItem('theme') as Theme
-		if (
-			storageTheme &&
-			(storageTheme.includes('light') || storageTheme.includes('dark'))
-		)
-			return updateThemeByStorage(storageTheme)
-		updateThemeOnInitBySystemPreferences(),
-			updateThemeOnSystemPreferencesChanges()
+		component = Icon($theme)
+		updateThemeOnSystemPreferencesChanges()
 	})
-
-	theme.subscribe((currentTheme) => (component = Icon(currentTheme)))
-
-	const updateThemeByStorage = (storageTheme: Theme) => {
-		theme.set(storageTheme)
-		component = Icon(storageTheme)
-	}
 
 	const handleOnClick = () => {
 		const newTheme = getTheme($theme) === 'light' ? 'dark' : 'light'
-		window.localStorage.setItem('theme', newTheme)
 		theme.set(newTheme)
-	}
-
-	const updateThemeOnInitBySystemPreferences = () => {
-		isSystemDark =
-			window.matchMedia &&
-			window.matchMedia('(prefers-color-scheme: dark)').matches
-		component = Icon($theme)
+		component = Icon(newTheme)
 	}
 
 	const updateThemeOnSystemPreferencesChanges = () =>
 		window
 			.matchMedia('(prefers-color-scheme: dark)')
-			.addEventListener('change', (event) => {
-				isSystemDark = event.matches
+			.addEventListener('change', () => {
+				changeTheme()
 				component = Icon($theme)
 			})
 </script>
 
 <Button
-  class={classMap({
-    'dark-theme': $theme === ThemeOptions.Dark,
-    'light-theme': $theme === ThemeOptions.Light,
-  })}
+	class={classMap({
+		'dark-theme': $theme === ThemeOptions.Dark,
+		'light-theme': $theme === ThemeOptions.Light
+	})}
 	title={$t('common.hints.themeSwitch')}
 	data-testid="theme-switch"
 	onClick={handleOnClick}
-  link
+	link
 >
 	<svelte:component this={component} />
 </Button>

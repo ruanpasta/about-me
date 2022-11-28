@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<style lang="scss">
+<style lang="scss" global>
   .gradient {
     @apply transition ease-in-out delay-150;
     @apply bg-gradient-to-r from-green-900 dark:from-orange via-green-500/50 dark:via-red/50 to-green-100/25 dark:to-blue/25;

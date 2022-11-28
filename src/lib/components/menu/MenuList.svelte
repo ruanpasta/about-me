@@ -72,7 +72,7 @@
 	{/each}
 {/if}
 
-<style lang="scss">
+<style lang="scss" global>
 	.ab-menu-list {
 		@apply flex items-center cursor-pointer;
 		@apply text-black-700 dark:text-white-400 font-normal;

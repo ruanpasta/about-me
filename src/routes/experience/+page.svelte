@@ -35,7 +35,7 @@
 					{#each item.links as link}
 						<Button
 							class="experience-button"
-              data-title={link.label}
+							data-title={link.label}
 							onClick={() => navigate(link.url)}
 							link
 						>
@@ -61,19 +61,17 @@
 	{/each}
 </Card>
 
-<style lang="scss">
-	:global {
-		.experience-content-buttons {
-			@apply mt-4 grid grid-flow-col auto-cols-max gap-4;
-		}
-		.experience-content-badges {
-			@apply mt-2 grid grid-flow-col auto-cols-max gap-2;
-		}
-		.experience-button {
-			svg {
-				@apply inline mr-2;
-				@apply text-green-900 dark:text-orange;
-			}
+<style lang="scss" global>
+	.experience-content-buttons {
+		@apply mt-4 grid grid-flow-col auto-cols-max gap-4;
+	}
+	.experience-content-badges {
+		@apply mt-2 grid grid-flow-col auto-cols-max gap-2;
+	}
+	.experience-button {
+		svg {
+			@apply inline mr-2;
+			@apply text-green-900 dark:text-orange;
 		}
 	}
 </style>

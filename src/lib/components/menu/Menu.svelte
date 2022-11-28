@@ -41,11 +41,11 @@
 		>
 			<Menu size={30} />
 		</Button>
-    <MenuModal {menus} {showMenu} {isMobile} />
+		<MenuModal {menus} {showMenu} {isMobile} />
 	{:else}
 		<div class="menu-items relative">
 			{#each menus as menu}
-        <MenuModal {menu} {showMenu} />
+				<MenuModal {menu} {showMenu} />
 				<a
 					data-sveltekit-prefetch
 					href={menu.path}
@@ -61,28 +61,26 @@
 	{/if}
 </div>
 
-<style lang="scss">
-	:global {
-		.ab-menu {
-			@apply text-black-800/70 dark:text-gray-100;
-			@apply rounded-b-[30px];
+<style lang="scss" global>
+	.ab-menu {
+		@apply text-black-800/70 dark:text-gray-100;
+		@apply rounded-b-[30px];
 
-			&__list {
-				@apply flex flex-col gap-4;
-				@apply bg-white-500 dark:bg-black-600;
-			}
+		&__list {
+			@apply flex flex-col gap-4;
+			@apply bg-white-500 dark:bg-black-600;
+		}
 
-			&--open {
-				@apply p-4 text-black-700 dark:text-white-400;
-			}
+		&--open {
+			@apply p-4 text-black-700 dark:text-white-400;
+		}
 
-			&__dropdown {
-				@apply fixed top-0 left-0 w-full z-10;
-			}
+		&__dropdown {
+			@apply fixed top-0 left-0 w-full z-10;
+		}
 
-			.ab-menu__list__items {
-				@apply flex flex-col gap-4;
-			}
+		.ab-menu__list__items {
+			@apply flex flex-col gap-4;
 		}
 	}
 

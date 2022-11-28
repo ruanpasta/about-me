@@ -22,7 +22,7 @@
 	</div>
 </Card>
 
-<style lang="scss">
+<style lang="scss" global>
 	:global(.projects-list) {
 		@apply flex flex-col items-center;
 	}

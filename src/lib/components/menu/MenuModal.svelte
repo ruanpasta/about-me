@@ -72,7 +72,7 @@
 	{/if}
 </div>
 
-<style lang="scss">
+<style lang="scss" global>
 	.ab-menu-modal {
 		@apply text-green-500/50 dark:text-red/50 text-2xl;
 		@apply w-max;
@@ -108,14 +108,12 @@
 		}
 	}
 
-	:global {
-		.ab-menu-modal__gradient {
-			@apply rounded-[30px] w-max relative top-10 left-2;
-			@apply rounded-b-[30px] rounded-tl-none rounded-tr-[30px];
-		}
+	.ab-menu-modal__gradient {
+		@apply rounded-[30px] w-max relative top-10 left-2;
+		@apply rounded-b-[30px] rounded-tl-none rounded-tr-[30px];
+	}
 
-		.ab-menu-modal__gradient--mobile {
-			@apply rounded-b-[30px] rounded-t-none w-full relative top-0 left-0;
-		}
+	.ab-menu-modal__gradient--mobile {
+		@apply rounded-b-[30px] rounded-t-none w-full relative top-0 left-0;
 	}
 </style>
