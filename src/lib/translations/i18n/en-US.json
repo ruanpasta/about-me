@@ -10,5 +10,15 @@
     "home": "Home",
     "languageSwitch": "Language switch",
     "themeSwitch": "Theme switch"
+  },
+  "mock": {
+    "skills": {
+      "description": "Here you can see some technologies that I've more affinity. As I evolve and remeber others, I'll adding them to this list."
+    },
+    "experience": {
+      "octadesk": "Building a chat widget that connects with other company projects. Helping other squads by fixing their bugs. Working on a mobile/desktop app chat application.",
+      "ambevTech": "",
+      "seniorSistemas": ""
+    }
   }
 }

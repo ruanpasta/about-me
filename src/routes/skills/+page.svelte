@@ -12,7 +12,7 @@
 
 <Card title={$t('common.menu.skills')}>
 	<p data-testid="skills-card-description">
-		{description}
+		{$t(description)}
 	</p>
 	<div class="skills">
 		<div class="skills__technologies">

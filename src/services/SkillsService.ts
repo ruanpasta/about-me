@@ -1,24 +1,22 @@
 import type { Skills } from "src/global"
 
-const mockedDescription = `Ola, sou um amante do ecosistema JS/TS e tudo que os envolve, mas estou em
-uma constante busca de novos conhecimentos, nas areas de Backend, Devops,
-Design e tambem no desenvolvimento de games. Veja algumas das tecnologias
-que uso:`
+const mockedDescription = 'common.mock.skills.description' 
 
 const mockedTechnologies = [
-  { label: 'github', highlighted: false },
+  { label: 'github' },
   { label: 'angular', highlighted: true },
-  { label: 'sass', highlighted: false },
+  { label: 'sass' },
   { label: 'flutter', highlighted: true },
-  { label: 'css', highlighted: false },
+  { label: 'css' },
   { label: 'vue', highlighted: true },
-  { label: 'html', highlighted: false },
+  { label: 'html' },
   { label: 'react', highlighted: true },
-  { label: 'sql', highlighted: false },
-  { label: 'ui', highlighted: false },
+  { label: 'sql' },
+  { label: 'ui' },
   { label: 'svelte', highlighted: true },
-  { label: 'npm/yarn', highlighted: false },
-  { label: 'neovim', highlighted: false }
+  { label: 'npm/yarn' },
+  { label: 'neovim' },
+  { label: 'netlify' },
 ]
 
 const getSkills = async (): Promise<Skills> => {
