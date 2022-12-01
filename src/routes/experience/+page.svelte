@@ -47,7 +47,7 @@
 			{/if}
 
 			<Row>
-				<p>{item.roleDescription}</p>
+				<p>{$t(item.roleDescription)}</p>
 			</Row>
 
 			{#if item.technologies?.length}

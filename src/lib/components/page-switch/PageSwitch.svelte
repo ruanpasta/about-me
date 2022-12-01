@@ -65,14 +65,14 @@
 
 		&__left {
 			@apply cursor-pointer;
-			@apply rounded-l-2xl bg-green-900/70 dark:bg-orange/70;
-			@apply hover:bg-green-900/90 dark:bg-orange/90;
+			@apply rounded-l-2xl bg-green-900/70 dark:bg-orange/50;
+			@apply hover:bg-green-900/90 dark:hover:bg-orange/80;
 		}
 
 		&__right {
 			@apply cursor-pointer;
-			@apply rounded-r-2xl bg-green-100/70 dark:bg-blue/70;
-			@apply hover:bg-green-100/100 dark:bg-blue/100;
+			@apply rounded-r-2xl bg-green-100/70 dark:bg-blue/50;
+			@apply hover:bg-green-100/100 dark:hover:bg-blue/100;
 		}
 	}
 </style>

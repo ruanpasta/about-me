@@ -85,7 +85,7 @@
 	}
 
 	.menu-items {
-		@apply flex gap-2;
+		@apply flex gap-2 select-none;
 		@apply font-bold text-transparent bg-clip-text;
 		@apply bg-green-900 dark:bg-orange;
 

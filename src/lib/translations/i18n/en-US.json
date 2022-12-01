@@ -17,8 +17,11 @@
     },
     "experience": {
       "octadesk": "Building a chat widget that connects with other company projects. Helping other squads by fixing their bugs. Working on a mobile/desktop app chat application.",
-      "ambevTech": "",
-      "seniorSistemas": ""
-    }
+      "ambevTech": "I started to develop a platform to connect, manage and tracking several DevOps features from Azure and others",
+      "seniorSistemas": "I worked on maintaining our squad projects and working on some new features. I also helped other squads with their frontend deliveries. Also, I created a new app for managers and plugging our solutions into it."
+    },
+    "aboutMe": {
+      "resume": ""
+    } 
   }
 }

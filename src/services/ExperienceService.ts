@@ -6,8 +6,7 @@ const mockedExperiences = [
   {
     company: 'Octadesk',
     opened: true,
-    roleDescription:
-      'Desenvolvo as solucoes de frontend, principalmente focado no projeto Widget com as tecnologias Vuejs/Nuxt e Svelte.',
+    roleDescription: 'common.mock.experience.octadesk',
     entree: '2022',
     leave: '',
     links: [
@@ -30,8 +29,7 @@ const mockedExperiences = [
   {
     company: 'AmbevTech',
     opened: false,
-    roleDescription:
-      'Desenvolvo as solucoes de frontend, principalmente focado no projeto Widget com as tecnologias Vuejs/Nuxt e Svelte.',
+    roleDescription: 'common.mock.experience.ambevTech',
     entree: '2021',
     leave: '2022',
     links: [
@@ -54,8 +52,7 @@ const mockedExperiences = [
   {
     company: 'Senior Sistemas',
     opened: false,
-    roleDescription:
-      'Desenvolvo as solucoes de frontend, principalmente focado no projeto Widget com as tecnologias Vuejs/Nuxt e Svelte.',
+    roleDescription: 'common.mock.experience.seniorSistemas',
     entree: '2018',
     leave: '2022',
     links: [

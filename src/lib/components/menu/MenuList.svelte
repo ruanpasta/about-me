@@ -74,7 +74,7 @@
 
 <style lang="scss" global>
 	.ab-menu-list {
-		@apply flex items-center cursor-pointer;
+		@apply flex items-center cursor-pointer select-none;
 		@apply text-black-700 dark:text-white-400 font-normal;
 
 		&__submenu {
