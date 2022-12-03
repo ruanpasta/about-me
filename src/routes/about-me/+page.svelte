@@ -5,7 +5,7 @@
 
 	const resume = $t('common.mock.aboutMe.resume')
 
-	let fragmentedResume = resume.split('.')
+	// let fragmentedResume = resume.split('.')
 </script>
 
 <Card title={$t('common.menu.aboutMe')}>
@@ -25,11 +25,14 @@
 		</Gradient>
 	</div>
 
-	{#each fragmentedResume as text}
-		<p class="about-me-resume">
-			{text}
-		</p>
-	{/each}
+	<!-- {#each fragmentedResume as text} -->
+	<!-- 	<p class="about-me-resume"> -->
+	<!-- 		{text} -->
+	<!-- 	</p> -->
+	<!-- {/each} -->
+  <p class="about-me-resume">
+    {resume}
+  </p>
 </Card>
 
 <style lang="scss">
@@ -48,6 +51,6 @@
 	}
 
 	.about-me-resume {
-		@apply mx-10 mb-4;
+		@apply mx-10 mb-4 whitespace-pre-line;
 	}
 </style>
