@@ -36,4 +36,4 @@ You can preview the production build with `npm run preview`.
 
 > To deploy this app, you just need to push commits on branch main.
 
-<center>🚀 Project released 1.0.0 🚀</center>
+<h4 align="center">🚀 Project released 1.0.0 🚀</h4>
