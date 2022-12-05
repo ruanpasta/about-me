@@ -3,9 +3,10 @@
 > In this project I'll go to create my portfolio. Here you can see some information about me and my skills and also some projects that I developed.
 
 Links:
- - 📃 [Notion](https://www.notion.so/ruanpasta-website-7f0318ddf62a40e88ef5747ff71f3e53)
+ - 🌐 [Site](https://www.ruanpasta.com)
  - 🖌️ [Figma project](https://www.figma.com/file/RcZYIwkHN66Jv4Xwfe8G3x/Portfolio?node-id=0%3A1)
  - 🏜️ [Figma prototype flux](https://www.figma.com/proto/RcZYIwkHN66Jv4Xwfe8G3x/Portfolio?node-id=19%3A13&scaling=scale-down&page-id=0%3A1&starting-point-node-id=19%3A13)
+ - 📃 [Task board](https://github.com/users/ruanpasta/projects/1)
 
 
 ## Developing
@@ -33,6 +34,6 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> To deploy this app, you just need to push commits on branch main.
 
-<center>🚀 This project is under construction 🚀</center>
+<center>🚀 Project released 1.0.0 🚀</center>
