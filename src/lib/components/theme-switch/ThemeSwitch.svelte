@@ -38,7 +38,6 @@
 	}
 
 	const Icon = (theme: Theme): any => {
-		console.log('Icon getTheme', getTheme(theme))
 		return getTheme(theme) === 'light' ? WhiteBalanceSunny : MoonWaningCrescent
 	}
 

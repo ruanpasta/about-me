@@ -12,7 +12,7 @@
 	<div class="projects-list">
 		{#each projects as project}
 			<a
-				data-sveltekit-prefetch
+				data-sveltekit-preload-data="hover"
 				href={`works/${project.value}`}
 				class="projects-list__item"
 			>

@@ -56,7 +56,7 @@
 			{#each menus as menu}
 				<MenuModal {menu} {showMenu} />
 				<a
-					data-sveltekit-prefetch
+					data-sveltekit-preload-data="hover"
 					href={menu.path}
 					class={classMap({
 						'menu-items__label': true

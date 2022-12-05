@@ -25,7 +25,7 @@
 	const updatePaths = (route: NavigationTarget | string | null) => {
 		const isString = typeof route === 'string'
 		const currentPathIndex = getPathIndex(
-			(isString ? route : route?.routeId) || ''
+			(isString ? route : route?.route?.id) || ''
 		)
 
 		previousPath = routePaths[currentPathIndex - 1] ?? '/'
@@ -53,7 +53,7 @@
 				'ab-page-switch__left--mobile': $isMobile
 			})}
 		>
-			<a data-sveltekit-prefetch href={previousPath}>
+			<a data-sveltekit-preload-data="hover" href={previousPath}>
 				<ChevronLeft size={24} />
 			</a>
 		</div>
@@ -63,7 +63,7 @@
 				'ab-page-switch__right--mobile': $isMobile
 			})}
 		>
-			<a data-sveltekit-prefetch href={nextPath}>
+			<a data-sveltekit-preload-data="hover" href={nextPath}>
 				<ChevronRight size={24} />
 			</a>
 		</div>

@@ -4,6 +4,7 @@ const mockedWeatherNow = {
   title: 'common.mock.projects.weatherNow.title',
   description: 'common.mock.projects.weatherNow.description',
   links: [
+    { label: 'common.viewSite', url: 'https://weather-now.ruanpasta.com/' },
     { label: 'Github', url: 'https://github.com/ruanpasta/weather-now' },
   ],
   technologies: [

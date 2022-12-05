@@ -53,7 +53,7 @@
 			on:mouseleave={() => (showHover = false)}
 		>
 			<a
-				data-sveltekit-prefetch
+				data-sveltekit-preload-data="hover"
 				href={menu.path}
 				class={classMap({
 					'ab-menu-list__label': true,
