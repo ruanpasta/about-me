@@ -11,6 +11,6 @@
 	}
 </script>
 
-<Button title={$t('common.hints.languageSwitch')} onClick={changeLangue} link>
+<Button class="select-none" title={$t('common.hints.languageSwitch')} onClick={changeLangue} link>
 	{current}
 </Button>

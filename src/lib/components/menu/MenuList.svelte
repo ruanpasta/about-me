@@ -45,7 +45,7 @@
 
 	<Gradient
 		class="w-full ml-3"
-		bgClass="bg-background-intermediate"
+		bgClass="bg-white-500 dark:bg-black-600"
 		show={isGradient}
 	>
 		<div
@@ -74,7 +74,7 @@
 
 <style lang="scss" global>
 	.ab-menu-list {
-		@apply flex items-center cursor-pointer;
+		@apply flex items-center cursor-pointer select-none;
 		@apply text-black-700 dark:text-white-400 font-normal;
 
 		&__submenu {

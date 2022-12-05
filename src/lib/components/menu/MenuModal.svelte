@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { classMap } from '$/helpers/classMap'
+  import { isMobile } from '$/lib/stores/common'
 	import { getContext } from 'svelte'
 	import { Gradient } from '../common'
 	import type { MenuContext } from './MenuContext'
@@ -9,7 +10,6 @@
 	export let menu: MenuItem = { name: '', path: '' }
 	export let menus: MenuItem[] = []
 	export let showMenu = false
-	export let isMobile = false
 	const { closeMenu } = getContext<MenuContext>('menu')
 
 	$: hasMenus = menus?.length
@@ -21,21 +21,22 @@
 
 <div
 	class={classMap({
-		relative: !isMobile
+		relative: !$isMobile
 	})}
+  {...$$restProps}
 >
 	{#if (hasMenus || hasMenuItems) && showMenu}
 		<div
 			id="ab-menu-modal"
 			class={classMap({
 				'ab-menu-modal__dropdown': true,
-				'ab-menu-modal__dropdown--mobile': isMobile
+				'ab-menu-modal__dropdown--mobile': $isMobile
 			})}
 		>
 			<Gradient
 				class={classMap({
 					'ab-menu-modal__gradient': true,
-					'ab-menu-modal__gradient--mobile': isMobile
+					'ab-menu-modal__gradient--mobile': $isMobile
 				})}
 				position="all"
 				filled
@@ -43,9 +44,9 @@
 				<div
 					class={classMap({
 						'ab-menu-modal': true,
-						'ab-menu-modal--mobile': isMobile,
+						'ab-menu-modal--mobile': $isMobile,
 						'ab-menu-modal__list': true,
-						'ab-menu-modal__list--mobile': isMobile,
+						'ab-menu-modal__list--mobile': $isMobile,
 						'ab-menu-modal--open': true
 					})}
 					on:mouseleave={() => closeMenu()}
@@ -53,7 +54,7 @@
 					<ul
 						class={classMap({
 							'ab-menu-modal__list__items': true,
-							'ab-menu-modal__list__items--mobile': isMobile
+							'ab-menu-modal__list__items--mobile': $isMobile
 						})}
 					>
 						{#if hasMenuItems}

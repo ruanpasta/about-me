@@ -6,6 +6,7 @@
 	import type { NavigationTarget } from '@sveltejs/kit'
 	import { onMount } from 'svelte'
 	import { classMap } from '$/helpers/classMap'
+	import { isMobile } from '$/lib/stores/common'
 
 	let externalClass = ''
 	export { externalClass as class }
@@ -46,12 +47,22 @@
 	})}
 >
 	<Row justify="center">
-		<div class="ab-page-switch__left">
+		<div
+			class={classMap({
+				'ab-page-switch__left': true,
+				'ab-page-switch__left--mobile': $isMobile
+			})}
+		>
 			<a data-sveltekit-prefetch href={previousPath}>
 				<ChevronLeft size={24} />
 			</a>
 		</div>
-		<div class="ab-page-switch__right">
+		<div
+			class={classMap({
+				'ab-page-switch__right': true,
+				'ab-page-switch__right--mobile': $isMobile
+			})}
+		>
 			<a data-sveltekit-prefetch href={nextPath}>
 				<ChevronRight size={24} />
 			</a>
@@ -62,17 +73,25 @@
 <style lang="scss" global>
 	.ab-page-switch {
 		@apply w-max;
+	}
 
-		&__left {
-			@apply cursor-pointer;
-			@apply rounded-l-2xl bg-green-900/70 dark:bg-orange/70;
-			@apply hover:bg-green-900/90 dark:bg-orange/90;
-		}
+	.ab-page-switch__left {
+		@apply cursor-pointer;
+		@apply rounded-l-2xl bg-green-900/70 dark:bg-orange/50;
+		@apply hover:bg-green-900/90 dark:hover:bg-orange/80;
 
-		&__right {
-			@apply cursor-pointer;
-			@apply rounded-r-2xl bg-green-100/70 dark:bg-blue/70;
-			@apply hover:bg-green-100/100 dark:bg-blue/100;
-		}
+    &--mobile {
+      @apply rounded-full ml-4;
+    }
+	}
+
+	.ab-page-switch__right {
+		@apply cursor-pointer;
+		@apply rounded-r-2xl bg-green-100/70 dark:bg-blue/50;
+		@apply hover:bg-green-100/100 dark:hover:bg-blue/100;
+
+    &--mobile {
+      @apply rounded-full ml-4;
+    }
 	}
 </style>

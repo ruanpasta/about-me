@@ -9,7 +9,7 @@
 
 body, html {
   @apply h-full w-full text-black-700 bg-white-400 font-base;
-  @apply dark:text-white-400 dark:bg-black-700
+  @apply dark:text-white-400 dark:bg-black-700;
 }
 
 ::-webkit-scrollbar {

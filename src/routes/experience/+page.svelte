@@ -47,7 +47,7 @@
 			{/if}
 
 			<Row>
-				<p>{item.roleDescription}</p>
+				<p>{$t(item.roleDescription)}</p>
 			</Row>
 
 			{#if item.technologies?.length}
@@ -63,10 +63,10 @@
 
 <style lang="scss" global>
 	.experience-content-buttons {
-		@apply mt-4 grid grid-flow-col auto-cols-max gap-4;
+		@apply mt-4 flex flex-wrap gap-4;
 	}
 	.experience-content-badges {
-		@apply mt-2 grid grid-flow-col auto-cols-max gap-2;
+		@apply mt-2 flex flex-wrap gap-2;
 	}
 	.experience-button {
 		svg {

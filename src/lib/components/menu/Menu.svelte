@@ -7,10 +7,10 @@
 	import type { MenuItem } from './Menus'
 	import { t } from '$lib/translations'
 	import MenuModal from './MenuModal.svelte'
+	import { isMobile } from '$/lib/stores/common'
 
 	let showMenu = false
 	export let menus: MenuItem[] = []
-	export let isMobile = false
 
 	const closeExpandedMenu = (item: MenuItem): void => {
 		item.expanded = false
@@ -25,23 +25,32 @@
 
 	setContext<MenuContext>('menu', { closeMenu })
 
-	const show = (menu: MenuItem) => {
-		if (menu.items) showMenu = !showMenu
+	const show = (menu?: MenuItem) => {
+		if ($isMobile) return (showMenu = !showMenu)
+		if (menu?.items) showMenu = !showMenu
+	}
+
+	const handleClick = (event: MouseEvent) => {
+		const className = (event?.target as HTMLElement)?.className
+		if (typeof className === 'string' && !className.includes('menu'))
+			showMenu = false
 	}
 </script>
 
+<svelte:window on:click={handleClick} />
+
 <div>
-	{#if isMobile}
+	{#if $isMobile}
 		<Button
 			type="button"
 			title="Menu"
 			class="ab-menu"
-			onClick={() => (showMenu = !showMenu)}
+			onClick={() => show()}
 			link
 		>
 			<Menu size={30} />
 		</Button>
-		<MenuModal {menus} {showMenu} {isMobile} />
+		<MenuModal id="ab-menu-modal" {menus} {showMenu} />
 	{:else}
 		<div class="menu-items relative">
 			{#each menus as menu}
@@ -63,7 +72,7 @@
 
 <style lang="scss" global>
 	.ab-menu {
-		@apply text-black-800/70 dark:text-gray-100;
+		@apply text-green-500/70 dark:text-red/50;
 		@apply rounded-b-[30px];
 
 		&__list {
@@ -85,7 +94,7 @@
 	}
 
 	.menu-items {
-		@apply flex gap-2;
+		@apply flex gap-2 select-none;
 		@apply font-bold text-transparent bg-clip-text;
 		@apply bg-green-900 dark:bg-orange;
 

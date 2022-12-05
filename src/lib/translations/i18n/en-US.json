@@ -1,5 +1,8 @@
 {
   "title": "Software Engineer",
+  "viewSite": "View site",
+  "taskBoard": "Task board",
+  "pageNotFound": "Page not found",
   "menu": {
     "work": "Work",
     "skills": "Skills",
@@ -10,5 +13,28 @@
     "home": "Home",
     "languageSwitch": "Language switch",
     "themeSwitch": "Theme switch"
+  },
+  "mock": {
+    "skills": {
+      "description": "Here you can see some technologies that I've more affinity. As I evolve and remeber others, I'll adding them to this list."
+    },
+    "experience": {
+      "octadesk": "Building a chat widget that connects with other company projects. Helping other squads by fixing their bugs. Working on a mobile/desktop app chat application.",
+      "ambevTech": "I started to develop a platform to connect, manage and tracking several DevOps features from Azure and others",
+      "seniorSistemas": "I worked on maintaining our squad projects and working on some new features. I also helped other squads with their frontend deliveries. Also, I created a new app for managers and plugging our solutions into it."
+    },
+    "aboutMe": {
+      "resume": "I always wanted of work with tecnology. When I was child, I remember that my first contact with this universe was on a Tibia server that I was created to play with some friends and it ended up working out vey well. In those days I didn't think that this area its was really for me. It was then that many years later, the fate took me to meet a JAVA course, where I was developed on my conclusion project a small application with JAVA, Mysql, JS, HTML and CSS wich really showed me my interest in programing. \n\n Since then, I've specializing in frontend, acting with the mainly JS frameworks on market, like: Angular, React, Vue and Svelte. Also did some mobile works with Ionic and Flutter.\n\n I love getting to know new technologies, test concepts and seeing the things working. I've been expanding my knowledges on DevOps, Backend and UI/UX areas. I intend to do more projects related to these areas, to reforce my knowledges and learn new things."
+    },
+    "projects": {
+      "aboutMe": {
+        "title": "This project (About me)",
+        "description": "This project was created with objective of telling a bit about myself, my habilities, experiences, curiosities and also to present some project that I'll be developing. I believe that this project can evolve into more topics in the future."
+      },
+      "weatherNow": {
+        "title": "Weather now",
+        "description": "I was create this project to attend a short timeline challenge, where it was necessery to create a page to present weather information about some specific cities. I took this oportunity to learn more about Vue3 and see the differences between it and Vue2."
+      }
+    }
   }
 }

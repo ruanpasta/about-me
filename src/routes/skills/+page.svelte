@@ -12,7 +12,7 @@
 
 <Card title={$t('common.menu.skills')}>
 	<p data-testid="skills-card-description">
-		{description}
+		{$t(description)}
 	</p>
 	<div class="skills">
 		<div class="skills__technologies">
@@ -34,7 +34,7 @@
 		@apply text-black-800 dark:text-gray-100;
 
 		&__technologies {
-			@apply flex flex-wrap justify-center max-w-xs;
+			@apply flex flex-wrap justify-center max-w-md;
 		}
 
 		&__technologies__item {

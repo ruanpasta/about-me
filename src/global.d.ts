@@ -9,7 +9,8 @@ interface Links {
 interface Work {
 	title: string
 	description: string
-	links: Links[]
+	links: Links[],
+  technologies: Technology[]
 }
 
 interface Technology {
