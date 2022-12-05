@@ -21,7 +21,17 @@
       "seniorSistemas": "Trabalhei na sustentação de projetos, cuidando tanto da correção de bugs quanto implementação de novas entregas em diversos times. Atuei no desenvolvimento de um APP para os gestores para auxiliar o gerenciamento de suas equipes."
     },
     "aboutMe": {
-      "resume": "Sou um desenvolvedor de software focado em frontend. Utilizo os principais frameworks JS do mercado. \n\nEstou continuamente buscando novos conhecimentos nas áreas de desenvolvimento mobile, UI/UX, DevOps, Backend e desenvolvimento de jogos. Sou uma pessoa que aprende rápido, gosta de desafios e um amante de tecnologias."
-    } 
+      "resume": "Sempre tive vontade de trabalhar com tecnologia. Lembro que quando criança, meu primeiro contato nesse universo foi em um servidor de Tibia que criei para jogar com alguns amigos e acabou dando muito certo. Porém nunca achei que essa área era de fato pra mim. Foi então que vários anos depois o destino me levou de encontro a um curso de JAVA, onde desenvolvi no meu TCC uma pequena aplicação com JAVA, Mysql, JS, Html e CSS que despertou de fato meu interesse por programação.\n\n Desde então, venho me especializando no frontend, atuando com os principais frameworks JS do mercado, como: Angular, React, Vue e Svelte. Também fiz alguns trabalhos no desenvolvimento mobile, com Ionic e Flutter.\n\n Adoro conhecer novas tecnologias, testar conceitos e ver as coisas funcionando. Venho ampliando meus conhecimentos nas áreas de DevOps, Backend e UI/UX. Pretendo fazer mais projetos relacionados a essas áreas, para reforçar conhecimentos e aprender coisas novas."
+    },
+    "projects": {
+      "aboutMe": {
+        "title": "This project (About me)",
+        "description": "asd"
+      },
+      "weatherNow": {
+        "title": "Weather now",
+        "description": "dsa"
+      }
+    }
   }
 }

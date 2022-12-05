@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { theme } from '$lib/stores/theme'
-	import { onMount } from 'svelte'
+	import { onMount, SvelteComponent } from 'svelte'
 
 	import WhiteBalanceSunny from 'svelte-material-icons/WhiteBalanceSunny.svelte'
 	import MoonWaningCrescent from 'svelte-material-icons/MoonWaningCrescent.svelte'
@@ -37,7 +37,7 @@
 		}
 	}
 
-	const Icon = (theme: Theme) => {
+	const Icon = (theme: Theme): any => {
 		console.log('Icon getTheme', getTheme(theme))
 		return getTheme(theme) === 'light' ? WhiteBalanceSunny : MoonWaningCrescent
 	}

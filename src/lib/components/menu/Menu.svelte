@@ -7,10 +7,10 @@
 	import type { MenuItem } from './Menus'
 	import { t } from '$lib/translations'
 	import MenuModal from './MenuModal.svelte'
+  import { isMobile } from '$/lib/stores/common'
 
 	let showMenu = false
 	export let menus: MenuItem[] = []
-	export let isMobile = false
 
 	const closeExpandedMenu = (item: MenuItem): void => {
 		item.expanded = false
@@ -31,7 +31,7 @@
 </script>
 
 <div>
-	{#if isMobile}
+	{#if $isMobile}
 		<Button
 			type="button"
 			title="Menu"
@@ -41,7 +41,7 @@
 		>
 			<Menu size={30} />
 		</Button>
-		<MenuModal {menus} {showMenu} {isMobile} />
+		<MenuModal {menus} {showMenu} />
 	{:else}
 		<div class="menu-items relative">
 			{#each menus as menu}
@@ -63,7 +63,7 @@
 
 <style lang="scss" global>
 	.ab-menu {
-		@apply text-black-800/70 dark:text-gray-100;
+		@apply text-green-500/70 dark:text-red/50;
 		@apply rounded-b-[30px];
 
 		&__list {

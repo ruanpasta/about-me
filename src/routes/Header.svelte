@@ -17,8 +17,6 @@
 	import InformationOutline from 'svelte-material-icons/InformationOutline.svelte'
 	import { t } from '$lib/translations'
 
-	let innerWidth = 999
-
 	let menus: MenuItem[] = [
 		{
 			name: 'common.menu.skills',
@@ -47,11 +45,8 @@
 		},
 		{ name: 'common.menu.aboutMe', icon: InformationOutline, path: '/about-me' }
 	]
-
-	$: isMobile = innerWidth < 660
 </script>
 
-<svelte:window bind:innerWidth />
 
 <header>
 	<Navbar>
@@ -62,7 +57,7 @@
 				</Button>
 			</Section>
 			<Section>
-				<Menu {menus} {isMobile} />
+				<Menu {menus} />
 			</Section>
 			<Section class="nav-buttons">
 				<LanguageSwitch />
@@ -74,7 +69,7 @@
 
 <style lang="scss" global>
 	.logo {
-		@apply text-2xl font-black text-green-900 dark:text-orange;
+		@apply text-2xl font-black text-green-900 dark:text-orange select-none;
 	}
 	.nav-buttons {
 		@apply grid grid-flow-col gap-4;

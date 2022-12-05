@@ -45,7 +45,7 @@
 
 	<Gradient
 		class="w-full ml-3"
-		bgClass="bg-background-intermediate"
+		bgClass="bg-white-500 dark:bg-black-600"
 		show={isGradient}
 	>
 		<div
