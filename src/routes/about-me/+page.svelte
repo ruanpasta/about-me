@@ -5,7 +5,6 @@
 	import Gradient from '$lib/components/common/Gradient.svelte'
 	import { t } from '$lib/translations'
 
-	const resume = $t('common.mock.aboutMe.resume')
 </script>
 
 <Card title={$t('common.menu.aboutMe')}>
@@ -27,7 +26,7 @@
 			'about-me-resume--mobile': $isMobile
 		})}
 	>
-		{resume}
+		{$t('common.mock.aboutMe.resume')}
 	</p>
 </Card>
 

@@ -1,10 +1,10 @@
 <script>
-	import { classMap } from '$/helpers/classMap'
 	import { Card } from '$/lib/components'
+	import { t } from '$lib/translations'
 
 	export const projects = [
-		{ label: 'Weather now', value: 'weather-now' },
-		{ label: 'About me', value: 'about-me' }
+		{ label: 'common.mock.projects.aboutMe.title', value: 'about-me' },
+		{ label: 'common.mock.projects.weatherNow.title', value: 'weather-now' }
 	]
 </script>
 
@@ -16,7 +16,7 @@
 				href={`works/${project.value}`}
 				class="projects-list__item"
 			>
-				{project.label}
+				{$t(project.label)}
 			</a>
 		{/each}
 	</div>
@@ -28,6 +28,6 @@
 	}
 	.projects-list__item {
 		@apply text-black-700 dark:text-white-400;
-		@apply hover:text-black-900 dark:hover:bg-white-100 hover:font-black;
+		@apply hover:text-black-900 dark:hover:text-white-100 hover:font-black;
 	}
 </style>

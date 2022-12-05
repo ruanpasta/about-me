@@ -1,5 +1,7 @@
 {
   "title": "Engenheiro de Software",
+  "viewSite": "Ver site",
+  "taskBoard": "Quadro de tarefas",
   "menu": {
     "work": "Projetos",
     "skills": "Habilidades",
@@ -21,16 +23,16 @@
       "seniorSistemas": "Trabalhei na sustentação de projetos, cuidando tanto da correção de bugs quanto implementação de novas entregas em diversos times. Atuei no desenvolvimento de um APP para os gestores para auxiliar o gerenciamento de suas equipes."
     },
     "aboutMe": {
-      "resume": "Sempre tive vontade de trabalhar com tecnologia. Lembro que quando criança, meu primeiro contato nesse universo foi em um servidor de Tibia que criei para jogar com alguns amigos e acabou dando muito certo. Porém nunca achei que essa área era de fato pra mim. Foi então que vários anos depois o destino me levou de encontro a um curso de JAVA, onde desenvolvi no meu TCC uma pequena aplicação com JAVA, Mysql, JS, Html e CSS que despertou de fato meu interesse por programação.\n\n Desde então, venho me especializando no frontend, atuando com os principais frameworks JS do mercado, como: Angular, React, Vue e Svelte. Também fiz alguns trabalhos no desenvolvimento mobile, com Ionic e Flutter.\n\n Adoro conhecer novas tecnologias, testar conceitos e ver as coisas funcionando. Venho ampliando meus conhecimentos nas áreas de DevOps, Backend e UI/UX. Pretendo fazer mais projetos relacionados a essas áreas, para reforçar conhecimentos e aprender coisas novas."
+      "resume": "Sempre tive vontade de trabalhar com tecnologia. Lembro que quando criança, meu primeiro contato nesse universo foi em um servidor de Tibia que criei para jogar com alguns amigos e acabou dando muito certo. Naqueles tempos não achava que essa área era de fato pra mim. Foi então que vários anos depois o destino me levou de encontro a um curso de JAVA, onde desenvolvi no meu TCC uma pequena aplicação com JAVA, Mysql, JS, Html e CSS que despertou de fato meu interesse por programação.\n\n Desde então, venho me especializando no frontend, atuando com os principais frameworks JS do mercado, como: Angular, React, Vue e Svelte. Também fiz alguns trabalhos no desenvolvimento mobile, com Ionic e Flutter.\n\n Adoro conhecer novas tecnologias, testar conceitos e ver as coisas funcionando. Venho ampliando meus conhecimentos nas áreas de DevOps, Backend e UI/UX. Pretendo fazer mais projetos relacionados a essas áreas, para reforçar conhecimentos e aprender coisas novas."
     },
     "projects": {
       "aboutMe": {
-        "title": "This project (About me)",
-        "description": "asd"
+        "title": "Este projeto (About me)",
+        "description": "Este projeto foi criado com o objetivo de contar um pouco sobre mim, minhas habilidades, experiências, curiosidades e também, apresentar alguns projetos que estarei desenvolvendo. Acredito que esse projeto possa evoluir em mais tópicos futuramente."
       },
       "weatherNow": {
         "title": "Weather now",
-        "description": "dsa"
+        "description": "Criei este projeto para atender a um desafio de curto prazo, onde era nescessário criar uma página que apresentasse informações climáticas de algumas cidades específicas. Aproveitei esta oportunidade na época para aprender um pouco mais sobre Vue3 e ver as diferenças entre ele e o Vue2."
       }
     }
   }

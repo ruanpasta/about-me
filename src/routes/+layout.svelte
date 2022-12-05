@@ -9,7 +9,7 @@
 
 	const routePaths = ['/skills', '/experience', '/works', '/about-me']
 
-	let innerWidth = 999
+	let innerWidth = 659
 
 	$: if (innerWidth < 660) isMobile.set(true)
   $: if (innerWidth > 660) isMobile.set(false)

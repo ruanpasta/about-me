@@ -3,9 +3,8 @@
 	import { classMap } from '$helpers/classMap'
 	import GitHub from '$icons/github-icon.svelte'
 	import Linkedin from '$icons/linkedin-icon.svelte'
-	import { theme } from '$lib/stores/theme'
 	import { Button } from '$lib/components'
-  import { isMobile } from '$/lib/stores/common'
+	import { theme, isMobile } from '$/lib/stores/common'
 
 	let externalClass = ''
 	export { externalClass as class }

@@ -1,7 +1,12 @@
 {
 	"name": "about-me",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"private": true,
+  "author": { 
+    "name": "Ruan Augusto Pasta", 
+    "url": "https://www.ruanpasta.com/" 
+  },
+  "license": "UNLICENSED",  
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",

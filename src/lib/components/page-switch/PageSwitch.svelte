@@ -81,7 +81,7 @@
 		@apply hover:bg-green-900/90 dark:hover:bg-orange/80;
 
     &--mobile {
-      @apply rounded-full ml-3;
+      @apply rounded-full ml-4;
     }
 	}
 
@@ -91,7 +91,7 @@
 		@apply hover:bg-green-100/100 dark:hover:bg-blue/100;
 
     &--mobile {
-      @apply rounded-full ml-3;
+      @apply rounded-full ml-4;
     }
 	}
 </style>

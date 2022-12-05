@@ -33,13 +33,13 @@
 			icon: PackageVariantClosed,
 			path: '',
 			items: [
-				{
-					name: 'Weather now',
-					path: '/works/weather-now'
+        {
+					name: 'common.mock.projects.aboutMe.title',
+					path: '/works/about-me'
 				},
 				{
-					name: 'About me',
-					path: '/works/about-me'
+					name: 'common.mock.projects.weatherNow.title',
+					path: '/works/weather-now'
 				}
 			]
 		},

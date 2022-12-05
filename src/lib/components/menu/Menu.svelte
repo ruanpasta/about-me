@@ -7,7 +7,7 @@
 	import type { MenuItem } from './Menus'
 	import { t } from '$lib/translations'
 	import MenuModal from './MenuModal.svelte'
-  import { isMobile } from '$/lib/stores/common'
+	import { isMobile } from '$/lib/stores/common'
 
 	let showMenu = false
 	export let menus: MenuItem[] = []
@@ -25,10 +25,19 @@
 
 	setContext<MenuContext>('menu', { closeMenu })
 
-	const show = (menu: MenuItem) => {
-		if (menu.items) showMenu = !showMenu
+	const show = (menu?: MenuItem) => {
+		if ($isMobile) return (showMenu = !showMenu)
+		if (menu?.items) showMenu = !showMenu
+	}
+
+	const handleClick = (event: MouseEvent) => {
+		const className = (event?.target as HTMLElement)?.className
+		if (typeof className === 'string' && !className.includes('menu'))
+			showMenu = false
 	}
 </script>
+
+<svelte:window on:click={handleClick} />
 
 <div>
 	{#if $isMobile}
@@ -36,12 +45,12 @@
 			type="button"
 			title="Menu"
 			class="ab-menu"
-			onClick={() => (showMenu = !showMenu)}
+			onClick={() => show()}
 			link
 		>
 			<Menu size={30} />
 		</Button>
-		<MenuModal {menus} {showMenu} />
+		<MenuModal id="ab-menu-modal" {menus} {showMenu} />
 	{:else}
 		<div class="menu-items relative">
 			{#each menus as menu}

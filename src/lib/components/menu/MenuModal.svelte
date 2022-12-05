@@ -23,6 +23,7 @@
 	class={classMap({
 		relative: !$isMobile
 	})}
+  {...$$restProps}
 >
 	{#if (hasMenus || hasMenuItems) && showMenu}
 		<div

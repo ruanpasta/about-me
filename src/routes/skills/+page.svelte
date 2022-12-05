@@ -34,7 +34,7 @@
 		@apply text-black-800 dark:text-gray-100;
 
 		&__technologies {
-			@apply flex flex-wrap justify-center max-w-xs;
+			@apply flex flex-wrap justify-center max-w-md;
 		}
 
 		&__technologies__item {

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { theme } from '$lib/stores/theme'
-	import { onMount, SvelteComponent } from 'svelte'
+	import { theme } from '$lib/stores/common'
+	import { onMount } from 'svelte'
 
 	import WhiteBalanceSunny from 'svelte-material-icons/WhiteBalanceSunny.svelte'
 	import MoonWaningCrescent from 'svelte-material-icons/MoonWaningCrescent.svelte'
