@@ -4,53 +4,55 @@
 	import { Card } from '$lib/components'
 	import Gradient from '$lib/components/common/Gradient.svelte'
 	import { t } from '$lib/translations'
-
 </script>
 
 <Card title={$t('common.menu.aboutMe')}>
-	<div class="about-me-image">
-		<Gradient class="about-me-image--rounded" position="all" rounded>
-			<figure>
-				<img
-					src="/images/ruanpasta.jpg"
-					alt="Foto de Ruan Pasta"
-					data-testid="about-me-image"
-				/>
-			</figure>
-		</Gradient>
-	</div>
-
-	<p
+	<div
 		class={classMap({
-			'about-me-resume': true,
-			'about-me-resume--mobile': $isMobile
+			'about-me-content': true,
+			'about-me-content--mobile': $isMobile
 		})}
 	>
-		{$t('common.mock.aboutMe.resume')}
-	</p>
+		<div class="about-me-image">
+			<Gradient class="about-me-image--rounded" position="all" rounded>
+				<figure>
+					<img
+						src="/images/ruanpasta.jpg"
+						alt="Foto de Ruan Pasta"
+						data-testid="about-me-image"
+					/>
+				</figure>
+			</Gradient>
+		</div>
+
+		<p class="about-me-resume">
+			{$t('common.mock.aboutMe.resume')}
+		</p>
+	</div>
 </Card>
 
-<style lang="scss">
-	:global {
-		.about-me-image {
-			@apply flex justify-center mb-4;
+<style lang="scss" global>
+	.about-me-content {
+		@apply overflow-auto max-h-[500px];
 
-			&--rounded {
-				@apply w-40;
-			}
+		&--mobile {
+			@apply max-h-[530px];
+		}
+	}
 
-			img {
-				@apply rounded-full;
-			}
+	.about-me-image {
+		@apply flex justify-center mb-4;
+
+		&--rounded {
+			@apply w-40;
+		}
+
+		img {
+			@apply rounded-full;
 		}
 	}
 
 	.about-me-resume {
 		@apply mx-10 mb-4 whitespace-pre-line;
-		@apply overflow-auto max-h-[450px];
-
-		&--mobile {
-			@apply max-h-[500px];
-		}
 	}
 </style>

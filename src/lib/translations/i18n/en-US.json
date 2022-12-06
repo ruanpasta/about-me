@@ -4,7 +4,7 @@
   "taskBoard": "Task board",
   "pageNotFound": "Page not found",
   "menu": {
-    "work": "Work",
+    "work": "Projects",
     "skills": "Skills",
     "experience": "Experience",
     "aboutMe": "About me"
@@ -16,7 +16,7 @@
   },
   "mock": {
     "skills": {
-      "description": "Here you can see some technologies that I've affinity. The list will be updated as I evolve and remember others' skills."
+      "description": "Here you can see some technologies that I have affinity. The list will be updated as I evolve and remember others' skills."
     },
     "experience": {
       "octadesk": "Built a chat widget that connects with other company projects, helping other squads by fixing their bugs, developing a mobile and desktop chat application.",
