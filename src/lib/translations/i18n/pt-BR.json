@@ -33,7 +33,7 @@
       },
       "weatherNow": {
         "title": "Weather now",
-        "description": "Criei este projeto para atender a um desafio de curto prazo, onde era nescessário criar uma página que apresentasse informações climáticas de algumas cidades específicas. Aproveitei esta oportunidade na época para aprender um pouco mais sobre Vue3 e ver as diferenças entre ele e o Vue2."
+        "description": "Criei este projeto para atender a um desafio de curto prazo, onde era necessário criar uma página que apresentasse informações climáticas de algumas cidades específicas. Aproveitei esta oportunidade na época para aprender um pouco mais sobre Vue3 e ver as diferenças entre ele e o Vue2."
       }
     }
   }

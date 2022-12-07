@@ -20,7 +20,6 @@ const mockedAboutMe = {
   title: 'common.mock.projects.aboutMe.title',
   description: 'common.mock.projects.aboutMe.description',
   links: [
-    { label: 'common.viewSite', url: 'https://ruanpasta.com' },
     { label: 'Github', url: 'https://github.com/ruanpasta/about-me' },
     {
       label: 'Figma',
