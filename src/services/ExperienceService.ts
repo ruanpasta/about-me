@@ -39,7 +39,7 @@ const mockedExperiences = [
 		leave: '2022',
 		links: [
 			{
-				label: 'ambev.com',
+				label: 'ambev.com.br',
 				url: 'https://www.ambev.com.br',
 				component: OpenInNew
 			},
@@ -67,7 +67,7 @@ const mockedExperiences = [
 		leave: '2022',
 		links: [
 			{
-				label: 'seniorsistemas.com',
+				label: 'senior.com.br',
 				url: 'https://www.senior.com.br',
 				component: OpenInNew
 			},
