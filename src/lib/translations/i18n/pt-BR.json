@@ -34,6 +34,10 @@
       "weatherNow": {
         "title": "Weather now",
         "description": "Criei este projeto para atender a um desafio de curto prazo, onde era necessário criar uma página que apresentasse informações climáticas de algumas cidades específicas. Aproveitei esta oportunidade na época para aprender um pouco mais sobre Vue3 e ver as diferenças entre ele e o Vue2."
+      },
+      "coinApp": {
+        "title": "Coin APP",
+        "description": "Eu criei este projeto para atender um desafio de prazo curto e também para revisar e aplicar alguns conceitos relacionados a SSR/SSG com NextJS. Embora eu ainda não tenha conseguido concluí-lo 100%, eu me diverti criando alguns componentes responsivos com o StitchesJS, que tem uma funcionalidade muito semelhante ao Styled Components do React."
       }
     }
   }

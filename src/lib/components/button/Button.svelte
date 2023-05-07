@@ -3,6 +3,7 @@
 	import { classMap } from '$helpers/classMap'
 
 	export let link = false
+	export let inactive = false
 	export let onClick = () => {}
 
 	let externalClass = ''
@@ -13,14 +14,15 @@
 	type="button"
 	class={classMap({
 		[externalClass]: true,
-		'about-me-button': true
+		'about-me-button': true,
+		'about-me-button--inactive': inactive
 	})}
 	{...$$restProps}
 	on:click={onClick}
 	on:keydown={() => {}}
 >
 	<Gradient class="about-me-button__container" show={!link}>
-		<div class="about-me-button__container__content">
+		<div class={!inactive ? 'about-me-button__container__content' : null}>
 			<Row justify="start">
 				<slot name="leftIcon" />
 				<slot />
@@ -31,6 +33,10 @@
 
 <style lang="scss" global>
 	.about-me-button {
+		&--inactive {
+			@apply cursor-default;
+		}
+
 		&__container__content {
 			@apply transition ease-in-out delay-150;
 			@apply hover:scale-110 hover:font-bold;

@@ -4,13 +4,14 @@ interface Links {
 	label: string
 	url: string
 	component?: any
+	inactive?: boolean
 }
 
 interface Work {
 	title: string
 	description: string
-	links: Links[],
-  technologies: Technology[]
+	links: Links[]
+	technologies: Technology[]
 }
 
 interface Technology {

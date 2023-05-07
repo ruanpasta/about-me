@@ -33,13 +33,17 @@
 			icon: PackageVariantClosed,
 			path: '',
 			items: [
-        {
+				{
 					name: 'common.mock.projects.aboutMe.title',
 					path: '/works/about-me'
 				},
 				{
 					name: 'common.mock.projects.weatherNow.title',
 					path: '/works/weather-now'
+				},
+				{
+					name: 'common.mock.projects.coinApp.title',
+					path: '/works/coin-app'
 				}
 			]
 		},
@@ -47,13 +51,12 @@
 	]
 </script>
 
-
 <header>
 	<Navbar>
 		<Row>
 			<Section class="logo">
 				<Button title={$t('common.hints.home')} name="logo" link>
-					<a href="/" name="logo">RP</a>
+					<a href="/">RP</a>
 				</Button>
 			</Section>
 			<Section>

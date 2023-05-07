@@ -4,7 +4,8 @@
 
 	export const projects = [
 		{ label: 'common.mock.projects.aboutMe.title', value: 'about-me' },
-		{ label: 'common.mock.projects.weatherNow.title', value: 'weather-now' }
+		{ label: 'common.mock.projects.weatherNow.title', value: 'weather-now' },
+		{ label: 'common.mock.projects.coinApp.title', value: 'weather-now' }
 	]
 </script>
 

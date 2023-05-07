@@ -45,6 +45,7 @@
 								class="experience-button"
 								data-title={link.label}
 								onClick={() => navigate(link.url)}
+								inactive={link.inactive}
 								link
 							>
 								<svelte:component this={link.component} slot="leftIcon" />

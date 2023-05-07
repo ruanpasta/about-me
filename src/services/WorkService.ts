@@ -39,8 +39,24 @@ const mockedAboutMe = {
   ]
 }
 
+const mockedCoinApp = {
+  title: 'common.mock.projects.coinApp.title',
+  description: 'common.mock.projects.coinApp.description',
+  links: [
+    { label: 'common.viewSite', url: 'https://coin-app.ruanpasta.com/' },
+    { label: 'Github', url: 'https://github.com/ruanpasta/coin-app' },
+  ],
+  technologies: [
+    { label: 'NextJS' },
+    { label: 'Typescript' },
+    { label: 'StitchesJS' },
+    { label: 'Netlify' },
+  ]
+}
+
 const getWork = async (name: string): Promise<Work> => {
   if (name === 'about-me') return mockedAboutMe
+  if (name === 'coin-app') return mockedCoinApp 
 	return  mockedWeatherNow 
 } 
 
