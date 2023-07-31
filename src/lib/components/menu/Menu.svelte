@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { classMap } from '$helpers/classMap'
-	import { setContext } from 'svelte'
+	import { page, navigating } from '$app/stores'
+	import { onMount, setContext } from 'svelte'
 	import Menu from 'svelte-material-icons/Menu.svelte'
 	import Button from '../button/Button.svelte'
 	import type { MenuContext } from './MenuContext'
@@ -59,7 +60,10 @@
 					data-sveltekit-preload-data="hover"
 					href={menu.path}
 					class={classMap({
-						'menu-items__label': true
+						'menu-items__label': true,
+						'menu-items__label--selected':
+							(menu.path && $page.url.pathname.includes(menu.path)) ||
+							(menu.groupPath && $page.url.pathname.includes(menu.groupPath))
 					})}
 					on:click={() => show(menu)}
 				>
@@ -95,12 +99,16 @@
 
 	.menu-items {
 		@apply flex gap-2 select-none;
-		@apply font-bold text-transparent bg-clip-text;
+		@apply font-semibold text-transparent bg-clip-text;
 		@apply bg-green-900 dark:bg-orange;
 
 		&__label {
 			@apply text-xl;
-			@apply hover:text-black-900/50 dark:hover:text-white-100/50;
+			@apply hover:text-black-900/30 dark:hover:text-white-100/30;
+
+			&--selected {
+				@apply text-green-900 font-bold dark:text-white-100/30;
+			}
 		}
 	}
 </style>

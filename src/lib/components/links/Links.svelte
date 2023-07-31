@@ -9,7 +9,7 @@
 	let externalClass = ''
 	export { externalClass as class }
 
-	$: color = $theme === ThemeOptions.Dark ? '#787878' : '#383838'
+	$: color = $theme === ThemeOptions.Dark || $theme === ThemeOptions.System ? '#787878' : '#383838'
 
 	const navigate = (url: string) => window.open(url, '_blank')
 </script>
@@ -25,6 +25,7 @@
 		title="Github"
 		onClick={() => navigate('https://github.com/ruanpasta')}
 		link
+    rounded
 	>
 		<GitHub {color} />
 	</Button>
@@ -32,6 +33,7 @@
 		title="Linkedin"
 		onClick={() => navigate('https://www.linkedin.com/in/ruanpasta')}
 		link
+    rounded
 	>
 		<Linkedin {color} />
 	</Button>

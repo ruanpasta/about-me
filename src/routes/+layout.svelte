@@ -5,14 +5,14 @@
 	import Gradient from '$/lib/components/common/Gradient.svelte'
 	import { classMap } from '$/helpers/classMap'
 	import { onMount } from 'svelte'
-  import { isMobile } from '$/lib/stores/common'
+	import { isMobile } from '$/lib/stores/common'
 
 	const routePaths = ['/skills', '/experience', '/works', '/about-me']
 
 	let innerWidth = 659
 
 	$: if (innerWidth < 660) isMobile.set(true)
-  $: if (innerWidth > 660) isMobile.set(false)
+	$: if (innerWidth > 660) isMobile.set(false)
 
 	onMount(() => (innerWidth = window.innerWidth))
 </script>
@@ -39,17 +39,8 @@
 					<slot />
 				</main>
 
-				<footer
-					class={classMap({
-						app__footer: true,
-						'app__footer--mobile': $isMobile
-					})}
-				>
-					<Row>
-						<Links class="app__footer__item" />
-						<PageSwitch class="app__footer__item" {routePaths} />
-					</Row>
-				</footer>
+        <Links class="app__links" />
+        <PageSwitch class="app__page-switch" {routePaths} />
 			</div>
 		</Gradient>
 	</div>
@@ -64,7 +55,7 @@
 	.web {
 		@apply flex justify-center justify-items-center items-center;
 		@apply sm:min-h-screen;
-		@apply bg-white-500 dark:bg-black-600;
+		@apply bg-gray-500 dark:bg-black-600;
 	}
 
 	.web__content {
@@ -77,15 +68,12 @@
 	.web__content__gradient__fill {
 		@apply min-h-[800px];
 	}
-	.app__footer {
-		@apply absolute bottom-0 w-[99%];
 
-		&--mobile {
-			@apply fixed;
-		}
+	.app__links {
+		@apply m-4 absolute bottom-0 left-0;
 	}
 
-	.app__footer__item {
-		@apply m-2;
+	.app__page-switch {
+		@apply m-4 absolute bottom-6 right-0;
 	}
 </style>

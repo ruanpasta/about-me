@@ -3,9 +3,30 @@
 	import { t } from '$lib/translations'
 
 	export const projects = [
-		{ label: 'common.mock.projects.aboutMe.title', value: 'about-me' },
-		{ label: 'common.mock.projects.weatherNow.title', value: 'weather-now' },
-		{ label: 'common.mock.projects.coinApp.title', value: 'weather-now' }
+		{
+			name: 'common.mock.projects.aboutMe.title',
+			path: '/works/about-me'
+		},
+		{
+			name: 'common.mock.projects.vueWeatherChallenge.title',
+			path: '/works/vue-weather-challenge'
+		},
+		{
+			name: 'common.mock.projects.angularCalendarChallenge.title',
+			path: '/works/angular-calendar-challenge'
+		},
+		{
+			name: 'common.mock.projects.nextjsCoinChallenge.title',
+			path: '/works/nextjs-coin-challenge'
+		},
+		{
+			name: 'common.mock.projects.angularPlatformChallenge.title',
+			path: '/works/angular-platform-challenge'
+		},
+		{
+			name: 'common.mock.projects.vueGiphyChallenge.title',
+			path: '/works/vue-giphy-challenge'
+		}
 	]
 </script>
 
@@ -14,10 +35,10 @@
 		{#each projects as project}
 			<a
 				data-sveltekit-preload-data="hover"
-				href={`works/${project.value}`}
+				href={project.path}
 				class="projects-list__item"
 			>
-				{$t(project.label)}
+				{$t(project.name)}
 			</a>
 		{/each}
 	</div>

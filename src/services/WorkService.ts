@@ -1,18 +1,18 @@
 import type { Work } from "src/global"
-
-const mockedWeatherNow = {
-  title: 'common.mock.projects.weatherNow.title',
-  description: 'common.mock.projects.weatherNow.description',
+ 
+const mockedWeatherChallenge = {
+  title: 'common.mock.projects.vueWeatherChallenge.title',
+  description: 'common.mock.projects.vueWeatherChallenge.description',
   links: [
-    { label: 'common.viewSite', url: 'https://weather-now.ruanpasta.com/' },
-    { label: 'Github', url: 'https://github.com/ruanpasta/weather-now' },
+    { label: 'common.viewSite', url: 'https://vue-weather-challenge.ruanpasta.com/' },
+    { label: 'Github', url: 'https://github.com/ruanpasta/vue-weather-challenge' },
   ],
   technologies: [
-    { label: 'Vue3' },
-    { label: 'Javascript' },
+    { label: 'Vue.js/v3.0.0' },
+    { label: 'Vuex' },
+    { label: 'Vitest' },
     { label: 'Sass' },
     { label: 'Axios' },
-    { label: 'vitest' },
   ]
 }
 
@@ -34,30 +34,87 @@ const mockedAboutMe = {
     { label: 'SvelteKit/SSR' },
     { label: 'Typescript' },
     { label: 'TailwindCSS' },
-    { label: 'Playright' },
-    { label: 'Netlify' },
+    { label: 'Playwright' },
   ]
 }
 
-const mockedCoinApp = {
-  title: 'common.mock.projects.coinApp.title',
-  description: 'common.mock.projects.coinApp.description',
+const mockedCoinChallenge = {
+  title: 'common.mock.projects.nextjsCoinChallenge.title',
+  description: 'common.mock.projects.nextjsCoinChallenge.description',
   links: [
-    { label: 'common.viewSite', url: 'https://coin-app.ruanpasta.com/' },
-    { label: 'Github', url: 'https://github.com/ruanpasta/coin-app' },
+    { label: 'common.viewSite', url: 'https://nextjs-coin-challenge.ruanpasta.com/' },
+    { label: 'Github', url: 'https://github.com/ruanpasta/nextjs-coin-challenge' },
   ],
   technologies: [
     { label: 'NextJS' },
-    { label: 'Typescript' },
     { label: 'StitchesJS' },
-    { label: 'Netlify' },
+    { label: 'Axios' },
   ]
 }
 
-const getWork = async (name: string): Promise<Work> => {
-  if (name === 'about-me') return mockedAboutMe
-  if (name === 'coin-app') return mockedCoinApp 
-	return  mockedWeatherNow 
+const mockedGiphyChallenge = {
+  title: 'common.mock.projects.vueGiphyChallenge.title',
+  description: 'common.mock.projects.vueGiphyChallenge.description',
+  links: [
+    { label: 'common.viewSite', url: 'https://vue-giphy-challenge.ruanpasta.com/' },
+    { label: 'Github', url: 'https://github.com/ruanpasta/vue-giphy-challenge' },
+  ],
+  technologies: [
+    { label: 'Vue.js/v3.0.0' },
+    { label: 'Quasar' },
+    { label: 'Pinia' },
+    { label: 'TailwindCSS' },
+  ]
+}
+
+const mockedCalendarChallenge = {
+  title: 'common.mock.projects.angularCalendarChallenge.title',
+  description: 'common.mock.projects.angularCalendarChallenge.description',
+  links: [
+    { label: 'common.viewSite', url: 'https://angular-calendar-challenge.ruanpasta.com/' },
+    { label: 'Github', url: 'https://github.com/ruanpasta/angular-calendar-challenge' },
+  ],
+  technologies: [
+    { label: 'Angular/v15.2.0' },
+    { label: 'Rxjs' },
+    { label: 'Ngrx' },
+    { label: 'Nrwl/Nx' },
+    { label: 'TailwindCSS' },
+  ]
+}
+
+const mockedPlatformChallenge = {
+  title: 'common.mock.projects.angularPlatformChallenge.title',
+  description: 'common.mock.projects.angularPlatformChallenge.description',
+  links: [
+    { label: 'common.viewSite', url: 'https://angular-platform-challenge.ruanpasta.com/' },
+    { label: 'Github', url: 'https://github.com/ruanpasta/angular-platform-challenge' },
+  ],
+  technologies: [
+    { label: 'Angular/v16.0.0' },
+    { label: 'Rxjs' },
+    { label: 'Ngrx' },
+    { label: 'Bootstrap' },
+  ]
+}
+
+const getWork = async (name: string): Promise<Work | object> => {
+  switch (name) {
+    case 'about-me':
+      return mockedAboutMe
+    case 'vue-weather-challenge':
+      return mockedWeatherChallenge
+    case 'angular-calendar-challenge':
+      return mockedCalendarChallenge
+    case 'nextjs-coin-challenge':
+      return mockedCoinChallenge
+    case 'vue-giphy-challenge':
+      return mockedGiphyChallenge
+    case 'angular-platform-challenge':
+      return mockedPlatformChallenge
+    default:
+      return {}
+  }
 } 
 
 export { getWork }

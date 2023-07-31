@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Gradient, Row } from '../common'
 	import { classMap } from '$helpers/classMap'
+	import { onMount } from 'svelte'
 
 	export let link = false
 	export let inactive = false
@@ -21,7 +22,12 @@
 	on:click={onClick}
 	on:keydown={() => {}}
 >
-	<Gradient class="about-me-button__container" show={!link}>
+	<Gradient
+		class="about-me-button__container"
+		show={!link}
+		rounded={$$restProps.rounded}
+		position={$$restProps.rounded ? 'all' : 'bottom'}
+	>
 		<div class={!inactive ? 'about-me-button__container__content' : null}>
 			<Row justify="start">
 				<slot name="leftIcon" />

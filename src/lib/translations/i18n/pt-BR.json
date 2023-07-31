@@ -29,15 +29,27 @@
     "projects": {
       "aboutMe": {
         "title": "Este projeto (About me)",
-        "description": "Este projeto foi criado com o objetivo de contar um pouco sobre mim, minhas habilidades, experiências, curiosidades e também, apresentar alguns projetos que estarei desenvolvendo. Acredito que esse projeto possa evoluir em mais tópicos futuramente."
+        "description": "Este projeto foi criado com o objetivo de contar um pouco sobre mim, minhas habilidades, experiências, curiosidades e também, apresentar alguns projetos que estarei desenvolvendo.\n\n Acredito que esse projeto possa evoluir em mais tópicos futuramente."
       },
-      "weatherNow": {
-        "title": "Weather now",
-        "description": "Criei este projeto para atender a um desafio de curto prazo, onde era necessário criar uma página que apresentasse informações climáticas de algumas cidades específicas. Aproveitei esta oportunidade na época para aprender um pouco mais sobre Vue3 e ver as diferenças entre ele e o Vue2."
+      "vueWeatherChallenge": {
+        "title": "Vue Weather Challenge",
+        "description": "Este projeto teve como objetivo atender a um desafio, onde foi criado uma página para apresentar informações climáticas de algumas específicas cidades. \n\n O layout e design do projeto estao de acordo com a proposta do desafio."
       },
-      "coinApp": {
-        "title": "Coin APP",
-        "description": "Eu criei este projeto para atender um desafio de prazo curto e também para revisar e aplicar alguns conceitos relacionados a SSR/SSG com NextJS. Embora eu ainda não tenha conseguido concluí-lo 100%, eu me diverti criando alguns componentes responsivos com o StitchesJS, que tem uma funcionalidade muito semelhante ao Styled Components do React."
+      "nextjsCoinChallenge": {
+        "title": "Nextjs Coin Challenge",
+        "description": "Este projeto foi desenvolvido para atender a um desafio.\n\n É um projeto de Criptomoedas com dados reais em uma data específica. No futuro, ele pode ser aprimorado para ter dados em tempo real. Estou utilizando SSR (Renderização do Lado do Servidor) nele, embora SSG (Geração Estática do Lado do Servidor) e até mesmo SPA (Aplicação de Página Única) possam ser usados em alguns casos. Como os dados são estáticos por meio da API disponível em /api/coins, estou usando apenas SSR.\n\n O layout e design do projeto estao de acordo com a proposta do desafio."
+      },
+      "vueGiphyChallenge": {
+        "title": "Vue Giphy Challenge",
+        "description": "Este projeto foi desenvolvido para atender a um desafio de curto prazo de aproximadamente 1 dia.\n\n Aqui, desenvolvi um sistema que busca GIFs de uma API externa. É possível pesquisar GIFs específicos e por categorias. Além disso, você pode clicar em um GIF para visualizá-lo em uma resolução maior e ser capaz de copiar seu link de compartilhamento.\n\n Algo legal que implementei é que você pode carregar inúmeros GIFs sem perder desempenho no navegador."
+      },
+      "angularCalendarChallenge": {
+        "title": "Angular Calendar Challenge",
+        "description": "Este projeto foi desenvolvido para atender a um desafio de curto prazo e foi desenvolvido em aproximadamente 3 dias.\n\n Aqui temos uma simulacao de um calendario com cadastro de agendamentos e drag and drop para alterar a data e hora dos agendamentos. Voce pode criar um novo evento na agenda clicando em Create ou clicando em alguma hora nos dias do calendario.\n\n Esse projeto usa Nx que eh um build system e a aplicacao foi construida usando Component First Architecture. Algumas configuracoes do projeto ficam em src/app porem o principal da aplicacao esta em libs/calendar/src/lib/."
+      },
+      "angularPlatformChallenge": {
+        "title": "Angular Platform Challenge",
+        "description": "Este projeto foi desenvolvido para atender a um desafio de curto prazo de aproximadamente 1 dia.\n\n Foram criados diversos componentes no projeto usando o bootstrap e se encontram na pasta src/app/components.\n\n O layout e design do projeto estao de acordo com a proposta do desafio."
       }
     }
   }

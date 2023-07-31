@@ -25,7 +25,7 @@
 	const updatePaths = (route: NavigationTarget | string | null) => {
 		const isString = typeof route === 'string'
 		const currentPathIndex = getPathIndex(
-			(isString ? route : route?.route?.id) || ''
+			(isString ? route : route?.routeId) || ''
 		)
 
 		previousPath = routePaths[currentPathIndex - 1] ?? '/'

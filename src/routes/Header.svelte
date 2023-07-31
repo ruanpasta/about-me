@@ -31,20 +31,33 @@
 		{
 			name: 'common.menu.work',
 			icon: PackageVariantClosed,
-			path: '',
+      path: '',
+      groupPath: '/works',
 			items: [
 				{
 					name: 'common.mock.projects.aboutMe.title',
 					path: '/works/about-me'
 				},
 				{
-					name: 'common.mock.projects.weatherNow.title',
-					path: '/works/weather-now'
+					name: 'common.mock.projects.vueWeatherChallenge.title',
+					path: '/works/vue-weather-challenge'
 				},
 				{
-					name: 'common.mock.projects.coinApp.title',
-					path: '/works/coin-app'
-				}
+					name: 'common.mock.projects.angularCalendarChallenge.title',
+					path: '/works/angular-calendar-challenge'
+				},
+				{
+					name: 'common.mock.projects.nextjsCoinChallenge.title',
+					path: '/works/nextjs-coin-challenge'
+				},
+				{
+					name: 'common.mock.projects.angularPlatformChallenge.title',
+					path: '/works/angular-platform-challenge'
+				},
+				{
+					name: 'common.mock.projects.vueGiphyChallenge.title',
+					path: '/works/vue-giphy-challenge'
+				},
 			]
 		},
 		{ name: 'common.menu.aboutMe', icon: InformationOutline, path: '/about-me' }

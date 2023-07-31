@@ -29,15 +29,27 @@
     "projects": {
       "aboutMe": {
         "title": "This project (About me)",
-        "description": "This project was create with objective of telling a bit about myself, my habilities, experiences, curiosities and also to present some project that I will be developing. I believe that this project can evolve into more topics in the future."
+        "description": "This project was create with objective of telling a bit about myself, my habilities, experiences, curiosities and also to present some project that I will be developing.\n\n I believe that this project can evolve into more topics in the future."
       },
-      "weatherNow": {
-        "title": "Weather now",
-        "description": "I created this project to participate in a short timeline challenge, where it was necessery to create a page to present weather information about some specific cities. I took this opportunity to learn more about Vue3 and see the differences between it and Vue2."
+      "vueWeatherChallenge": {
+        "title": "Vue Weather Challenge",
+        "description": "This project aimed to meet a challenge, where a page was created to present weather information for specific cities. \n\n The layout and design of the project align with the challenge's proposal."
       },
-      "coinApp": {
-        "title": "Coin APP",
-        "description": "I created this project to meet a short-term deadline challenge and also to review and apply some concepts related to SSR/SSG with NextJS. Although I have not been able to complete it 100% yet, I enjoyed creating some responsive components with StitchesJS, which has a very similar functionality to React's Styled Components."
+      "nextjsCoinChallenge": {
+        "title": "Nextjs Coin Challenge",
+        "description": "This project was developed to meet a challenge.\n\n It's a Cryptos project with real data on a specific date. In the future, it can be improved to have real-time data. I'm using SSR in it, although SSG and even SPA could be used in some cases, since the data is static through the API available at /api/coins, I'm only using SSR.\n\n The layout and design of the project align with the challenge's proposal."
+      },
+      "vueGiphyChallenge": {
+        "title": "Vue Giphy Challenge",
+        "description": "This project was developed to meet a short-term challenge of approximately 1 day.\n\n Here, I developed a system that fetches GIFs from an external API. It is possible to search for specific GIFs and by categories. Also, you can click on a GIF to view it in a larger resolution and be able to copy its sharing link.\n\n Something cool that I implemented is that you can load countless GIFs without losing performance in the browser."
+      },
+      "angularCalendarChallenge": {
+        "title": "Angular Calendar Challenge",
+        "description": "This project was developed to meet a short-term challenge and was completed in approximately 3 days.\n\n Here, we have a simulation of a calendar with appointment scheduling and drag and drop functionality to change the date and time of appointments. You can create a new event on the schedule by clicking on 'Create' or by clicking on a specific time on the calendar days.\n\n This project uses Nx, which is a build system, and the application was built using the Component First Architecture. Some project configurations are located in src/app, but the core of the application is in libs/calendar/src/lib/."
+      },
+      "angularPlatformChallenge": {
+        "title": "Angular Platform Challenge",
+        "description": "This project was developed to meet a short-term challenge of approximately 1 day.\n\n Several components were created in the project using Bootstrap and can be found in the folder src/app/components.\n\n The layout and design of the project align with the challenge's proposal."
       }
     }
   }

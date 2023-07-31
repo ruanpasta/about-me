@@ -50,7 +50,7 @@
 		@apply text-black-800 dark:text-gray-100;
 
 		&__technologies {
-			@apply flex flex-wrap justify-center max-w-md;
+			@apply flex flex-wrap justify-center;
 		}
 
 		&__technologies__item {
