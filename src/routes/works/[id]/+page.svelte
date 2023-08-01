@@ -43,7 +43,7 @@
 <style lang="scss" global>
 	.works-content {
     @apply flex flex-col gap-4;
-		@apply overflow-auto max-h-[450px];
+		@apply overflow-auto max-h-[550px];
 
     & > p {
       @apply whitespace-pre-line;

@@ -38,7 +38,7 @@
 
 <style lang="scss" global>
   .skills-content {
-		@apply overflow-auto max-h-[450px];
+		@apply overflow-auto max-h-[550px];
 
 		&--mobile {
 			@apply max-h-[530px];

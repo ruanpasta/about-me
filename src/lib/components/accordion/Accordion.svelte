@@ -65,7 +65,7 @@
 	}
 
 	.accordion__content {
-		@apply ml-4;
+		@apply ml-4 whitespace-pre-line;
 	}
 
 	.accordion__links {
