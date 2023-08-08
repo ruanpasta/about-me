@@ -50,6 +50,10 @@
       "angularPlatformChallenge": {
         "title": "Angular Platform Challenge",
         "description": "This project was developed to meet a short-term challenge of approximately 1 day.\n\n Several components were created in the project using Bootstrap and can be found in the folder src/app/components.\n\n The layout and design of the project align with the challenge's proposal."
+      },
+      "angularCrudChallenge": {
+        "title": "Angular Crud Challenge",
+        "description": "This project was developed to meet a short-term challenge of approximately 1 day.\n\n In this project, we have a CRUD. We list the clients by fetching from an external API. We can create a new client, edit, and remove existing ones.\n\n The layout and design of the project align with the challenge's proposal."
       }
     }
   }

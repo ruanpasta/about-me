@@ -50,6 +50,10 @@
       "angularPlatformChallenge": {
         "title": "Angular Platform Challenge",
         "description": "Este projeto foi desenvolvido para atender a um desafio de curto prazo de aproximadamente 1 dia.\n\n Foram criados diversos componentes no projeto usando o bootstrap e se encontram na pasta src/app/components.\n\n O layout e design do projeto estao de acordo com a proposta do desafio."
+      },
+      "angularCrudChallenge": {
+        "title": "Angular Crud Challenge",
+        "description": "Este projeto foi desenvolvido para atender a um desafio de curto prazo de aproximadamente 1 dia.\n\n Nesse projeto temos um CRUD. Listamos os clientes buscando de uma API externa. Podemos criar um novo cliente, editar e remover os existentes.\n\n O layout e design do projeto estao de acordo com a proposta do desafio."
       }
     }
   }

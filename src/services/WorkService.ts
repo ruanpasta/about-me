@@ -98,6 +98,22 @@ const mockedPlatformChallenge = {
   ]
 }
 
+const mockedCrudChallenge = {
+  title: 'common.mock.projects.angularCrudChallenge.title',
+  description: 'common.mock.projects.angularCrudChallenge.description',
+  links: [
+    { label: 'common.viewSite', url: 'https://angular-crud-challenge.ruanpasta.com/' },
+    { label: 'Github', url: 'https://github.com/ruanpasta/angular-crud-challenge' },
+  ],
+  technologies: [
+    { label: 'Angular/v16.1.5' },
+    { label: 'Rxjs' },
+    { label: 'Ngrx' },
+    { label: 'Jasimne/Karma' },
+    { label: 'Sass' },
+  ]
+}
+
 const getWork = async (name: string): Promise<Work | object> => {
   switch (name) {
     case 'about-me':
@@ -112,6 +128,8 @@ const getWork = async (name: string): Promise<Work | object> => {
       return mockedGiphyChallenge
     case 'angular-platform-challenge':
       return mockedPlatformChallenge
+    case 'angular-crud-challenge':
+      return mockedCrudChallenge
     default:
       return {}
   }

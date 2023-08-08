@@ -58,6 +58,10 @@
 					name: 'common.mock.projects.vueGiphyChallenge.title',
 					path: '/works/vue-giphy-challenge'
 				},
+				{
+					name: 'common.mock.projects.angularCrudChallenge.title',
+					path: '/works/angular-crud-challenge'
+				},
 			]
 		},
 		{ name: 'common.menu.aboutMe', icon: InformationOutline, path: '/about-me' }
